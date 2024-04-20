@@ -1,0 +1,26 @@
+PriceSmart
+
+Compares local stores for a given product and lists the price.
+Gives links to directions to said store, includes gas price beside map.
+used for groceries and other products where brand doesnt really matter.
+
+Sort based on price, price with travel, distance.
+Filter on delivery or not.
+
+Stores:
+Walmart done
+Target
+Marcs
+Aldi
+Acme
+Fishers
+giant eagle
+meijer
+kroger
+
+gas stations:
+bp
+sheets
+sunoco
+
+example: look for eggs
