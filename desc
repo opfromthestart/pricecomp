@@ -6,6 +6,9 @@ used for groceries and other products where brand doesnt really matter.
 
 Sort based on price, price with travel, distance.
 Filter on delivery or not.
+filter on price
+use - to omit words
+automatic sending as well as search button
 
 Stores:
 Walmart doneish (do captcha)

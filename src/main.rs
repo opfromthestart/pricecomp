@@ -1,7 +1,12 @@
-use std::{collections::HashMap, fmt::Display, str::FromStr};
+use std::{
+    collections::HashMap,
+    fmt::Display,
+    str::FromStr,
+    sync::{Arc, Mutex}, time::Duration,
+};
 
 use reqwest::Client;
-use rocket::response::content::RawHtml;
+use rocket::{form::validate::Len, response::content::RawHtml, State};
 use serde_json::Value;
 #[macro_use]
 extern crate rocket;
@@ -128,7 +133,7 @@ async fn gas_price_gasbuddy() -> Result<f64, String> {
     best_gas.ok_or("No prices found".into())
 }
 
-#[derive(Debug)]
+#[derive(Debug, Hash, PartialEq, Eq, Clone)]
 enum Source {
     Walmart,
     Target,
@@ -147,8 +152,19 @@ impl Display for Source {
         }
     }
 }
+impl Source {
+    fn vals() -> &'static [Self] {
+        &[
+            Self::Walmart,
+            Self::Target,
+            Self::Aldi,
+            Self::Meijer,
+            Self::Sams,
+        ]
+    }
+}
 
-#[derive(Debug)]
+#[derive(Debug, Clone)]
 struct Item {
     name: String,
     price: f64,
@@ -160,7 +176,7 @@ struct Item {
 impl Item {
     fn to_html(&self) -> String {
         format!(
-            "<h3>{}</h3><img src=\"{}\" class=\"search-image\"><br/>Price: <b>${}</b> {} </br><a href=\"{}\">Buy item from {}</a></br></br>",
+            "<h3>{}</h3><a href=\"{4}\" target=\"_blank\"><img src=\"{}\" class=\"search-image\"></a><br/>Price: <b>${}</b> {} </br><a href=\"{}\" target=\"_blank\">Buy item from {}</a></br></br>",
              self.name, self.image, self.price, self.unit_price.map(|u| format!("Unit price: <b>${u}</b>")).unwrap_or("".into()), self.link, self.source
         )
     }
@@ -189,7 +205,7 @@ impl Default for SortMode {
     }
 }
 
-#[derive(Debug, Default)]
+#[derive(Debug, Default, Clone)]
 struct ItemStack(Vec<Item>, SortMode);
 impl ItemStack {
     fn insert(&mut self, item: Item) {
@@ -208,7 +224,7 @@ impl ItemStack {
         self.0.insert(ipos, item)
     }
 
-    fn to_html(&self) -> String {
+    fn to_html_top(&self) -> String {
         self.0.iter().enumerate().fold(String::new(), |x, (i, y)| {
             x + &if i == 0 {
                 "<hr><div class=\"first\">".to_owned() + &y.to_html() + "</div>"
@@ -221,11 +237,30 @@ impl ItemStack {
             }
         })
     }
+    fn to_html(&self) -> String {
+        self.0.iter().fold(String::new(), |x,y| x+"<hr>"+&y.to_html())
+    }
     fn merge(mut self, rhs: ItemStack) -> ItemStack {
         for i in rhs.0.into_iter() {
             self.insert(i);
         }
         self
+    }
+    fn filter_names(&mut self, filter: &Search) {
+        self.0.retain(|i| filter.eval(&i.name));
+    }
+    // fn resort(&mut self, sort: SortMode) {
+    //     let mut is = ItemStack(vec![], sort);
+    //     let tv = std::mem::take(&mut self.0);
+    //     for i in tv {
+    //         is.insert(i);
+    //     }
+    //     *self = is;
+    // }
+    fn page(&self, page: usize) -> ItemStack {
+        let l = (page*10).max(0).min(self.0.len());
+        let h = (l+10).min(self.0.len());
+        ItemStack(self.0[l..h].to_vec(), self.1)
     }
 }
 
@@ -329,10 +364,11 @@ async fn get_price_of_target(item: &str) -> Result<ItemStack, String> {
     // data search products [] item product_description title
     // data search products [] price current_retail/formatted_unit_price
     let parse_json = serde_json::from_str::<Value>(&s).unwrap();
-    let Some(prods) = parse_json.as_object().unwrap()["data"]
+    let Some(prods) = parse_json
         .as_object()
         .unwrap()
-        .get("search")
+        .get("data")
+        .and_then(|d| d.as_object().unwrap().get("search"))
     else {
         return Err("Not found".into());
     };
@@ -507,7 +543,7 @@ async fn get_price_of_sams_club(item: &str) -> Result<ItemStack, String> {
                 .unwrap()["image"]
                 .as_str()
                 .unwrap();
-        println!("{name}");
+        // println!("{name}");
         let mut prices = item["skus"].as_array().unwrap()[0]
             .as_object()
             .unwrap()
@@ -518,13 +554,12 @@ async fn get_price_of_sams_club(item: &str) -> Result<ItemStack, String> {
                 .as_object()
                 .unwrap()
                 .get("clubOffer")
-                .unwrap()
-                .as_object()
-                .unwrap()["price"]
-                .as_object()
+                .map(|co| co.as_object().unwrap()["price"].as_object().unwrap());
         }
 
-        let prices = prices.unwrap();
+        let Some(prices) = prices else {
+            continue;
+        };
 
         let price = prices["finalPrice"].as_object().unwrap()["amount"]
             .as_f64()
@@ -588,8 +623,12 @@ fn index() -> RawHtml<&'static str> {
             border-radius: 4px;
             font-size: 18;
             text-align: center;
+            transition: background-color 0.3s ease;
         }
-        input[type="submit"] {
+        select:hover {
+            background-color: #aaa;
+        }
+        button#submit {
             background-color: #007bff;
             color: #fff;
             border: none;
@@ -598,7 +637,7 @@ fn index() -> RawHtml<&'static str> {
             cursor: pointer;
             transition: background-color 0.3s ease;
         }
-        input[type="submit"]:hover {
+        button#submit:hover {
             background-color: #0056b3;
         }
         .search-results {
@@ -655,14 +694,22 @@ fn index() -> RawHtml<&'static str> {
             background-color: #c09030;
             width: 100%;
         }
+        hr {
+           margin: 0px;
+           height: 2px;
+           background: #000;
+        }
+        p {
+        margin: 2px;
+        }
         </style><title>PriceSmart</title></head>
         <body>
         <div class="container">
-        <h1>PriceSmart</h1>
-        <h2>Save money on every purchase</h2>
-        <form hx-target="#results" hx-post="/search" hx-indicator="#load" class="search-form">
+        <h1 id="top">PriceSmart</h1>
+        <h2>Save money on every purchase, no matter how small</h2>
+        <form id="form" hx-trigger="change" hx-target="#results" hx-post="/search/1" hx-indicator="#load" class="search-form">
         <input name="prod" id="prod" placeholder="Enter product to buy">
-        <select name="subs">
+        <select name="subs" hx-trigger="change" hx-target="#form" hx-post="/form" hx-swap="outerHTML">
         <option value="">Include membership stores?</option>
         <option value="true">Yes</option>
         <option value="false">No</option>
@@ -671,8 +718,9 @@ fn index() -> RawHtml<&'static str> {
         <option value="unitPrice">Sort by unit price</option>
         <option value="price">Sort by price</option>
         </select>
-        <br/>
-        <input type="submit" value="Search">
+        <p id = "stores" hx-trigger="load" hx-post="/stores" hx-target="#stores"><input type="hidden" name="init"></p>
+        <p>Price between <input type="text" name="low"> and <input type="text" name="high">.</p>
+        <button id="submit" hx-trigger="click" hx-target="#results" hx-post="/search/1" hx-indicator="#load" class="search-form">Search</button>
         </form>
         <p id="load" class="htmx-indicator">Searching...</p>
         <p id="results" class="search-results"></p>
@@ -681,52 +729,264 @@ fn index() -> RawHtml<&'static str> {
     )
 }
 
-#[post("/search", data = "<data>")]
-async fn search(data: String) -> Result<RawHtml<String>, &'static str> {
-    let data_map: HashMap<&str, &str> = data.split('&').filter_map(|p| p.split_once('=')).collect();
-    let prod = data_map.get("prod").ok_or("No product found")?;
+fn parse_get(get: &str) -> HashMap<String, String>{
+get.replace("%20", " ").split('&').filter_map(|p| p.split_once('=')).map(|(a,b)| (a.to_owned(), b.to_owned())).collect()
+} 
+
+#[post("/stores", data="<things>")]
+fn stores(things: String) -> RawHtml<String> {
+    let data_map = parse_get(&things);
+    let empty = data_map.contains_key("init");
+    RawHtml(
+        Source::vals()
+            .iter()
+            .filter(|v| data_map["subs"]=="true" || v != &&Source::Sams)
+            .map(|s| {
+                if data_map.contains_key(&format!("{s}") as &str) || empty {
+                format!(
+                    "<input class=\"search-check\" type=\"checkbox\" name=\"{0}\" checked><label for=\"{0}\">{0}</label>",
+                    s
+                )
+                } else {
+                format!(
+                    "<input class=\"search-check\" type=\"checkbox\" name=\"{0}\" ><label for=\"{0}\">{0}</label>",
+                    s
+                )
+                }
+            })
+            .fold(String::new(), |s, b| s + &b),
+    )
+}
+
+#[post("/form", data="<data>")]
+fn form(data: String) -> RawHtml<String> {
+    let data_map = parse_get(&data); 
+    RawHtml(format!(r##"<form id="form" hx-trigger="change" hx-target="#results" hx-post="/search/1" hx-indicator="#load" class="search-form">
+        <input name="prod" id="prod" placeholder="Enter product to buy" value="{0}">
+        <select name="subs" hx-trigger="change" hx-target="#stores" hx-post="/stores">
+        <option value="" disabled>Include membership stores?</option>
+        <option value="true">Yes</option>
+        <option value="false">No</option>
+        </select>
+        <select name="sort">
+        <option value="unitPrice">Sort by unit price</option>
+        <option value="price">Sort by price</option>
+        </select>
+        <p id="stores">{1}</p>
+        <p>Price between <input type="text" name="low"> and <input type="text" name="high">.</p>
+        <button id="submit" hx-trigger="click" hx-target="#results" hx-post="/search/1" hx-indicator="#load" class="search-form">Search</button>
+        </form>"##,data_map.get("prod").unwrap_or(&"".to_owned()), &stores(data.clone()).0 ))
+}
+
+#[derive(Default, Debug)]
+struct CacheEntry(HashMap<Source, ItemStack>);
+#[derive(Default, Debug)]
+struct Cache(Arc<Mutex<HashMap<String, CacheEntry>>>);
+impl Cache {
+    fn insert(&self, item: &str, src: Source, items: &ItemStack) {
+        let mut hp = self.0.lock().unwrap();
+        match hp.get_mut(item) {
+            Some(p) => {
+                p.0.insert(src, items.clone());
+            }
+            None => {
+                hp.insert(
+                    item.to_owned(),
+                    CacheEntry([(src, items.clone())].into_iter().collect()),
+                );
+            }
+        }
+    }
+    fn has_item(&self, item: &str, src: &Source) -> Option<ItemStack> {
+        self.0
+            .lock()
+            .unwrap()
+            .get(item)
+            .and_then(|ce| ce.0.get(src).cloned())
+            .map(|v| {
+                std::thread::sleep(Duration::from_millis(500));
+                // black_box(());
+                v
+            })
+    }
+}
+
+#[derive(Clone, Debug)]
+struct Search<'a>(Vec<(&'a str, bool)>);
+impl<'a> Search<'a> {
+    fn from_str(s: &'a str) -> Result<Self, ()> {
+        let mut split_words = vec![];
+        let mut inquotes = false;
+        let mut start = 0;
+        for (i, c) in s.chars().enumerate() {
+            // println!("c{c} {inquotes}");
+            if c == ' ' && !inquotes {
+                split_words.push(&s[start..i]);
+                start = i + 1;
+            } else if c == '"' {
+                inquotes = !inquotes;
+            }
+        }
+        split_words.push(&s[start..]);
+        // println!("{split_words:?}");
+        if inquotes {
+            Err(())
+        } else {
+            Ok(Self(
+                split_words
+                    .iter()
+                    .map(|s| (s as &str, !s.starts_with('-')))
+                    .map(|(s, b)| {
+                        if !b {
+                            if s.chars().nth(1) == Some('"') {
+                                (&s[2..s.len() - 1], b)
+                            } else {
+                                (&s[1..s.len()], b)
+                            }
+                        } else if s.chars().nth(0) == Some('"') {
+                            (&s[0..s.len() - 1], b)
+                        } else {
+                            (s, b)
+                        }
+                    })
+                    .collect(),
+            ))
+        }
+    }
+    fn eval(&self, name: &str) -> bool {
+        let name = name.to_lowercase();
+        for (p, b) in self.0.iter() {
+            let p = p.to_lowercase();
+            if name.contains(&p) != *b {
+                return false;
+            }
+        }
+        true
+    }
+    fn pos(&self) -> String {
+        self.0
+            .iter()
+            .filter_map(|(x, b)| if *b { Some(x) } else { None })
+            .fold(String::new(), |a, b| a + " " + b)
+    }
+}
+
+#[post("/search/<page>", data = "<data>")]
+async fn search(data: String, page: usize, cache: &State<Cache>) -> Result<RawHtml<String>, &'static str> {
+    let data_map = parse_get(&data);
+    let prod = data_map
+        .get("prod")
+        .ok_or("No product found")?;
+    if prod.is_empty() {
+        return Ok(RawHtml("".into()))
+    }
+    let filter = Search::from_str(prod);
+    // println!("{prod} {filter:?}");
+    let prod = filter.clone().map(|x| x.pos()).unwrap_or(prod.to_string());
+    // println!("Prod: {prod}");
     let mut items = ItemStack::default();
     let Ok(sortmode) = data_map["sort"].parse::<SortMode>() else {
         return Err("Sorting mode invalid");
     };
     items.1 = sortmode;
     let mut prefix = String::new();
-    let target_res = get_price_of_target(prod).await;
-    if let Ok(target) = target_res {
-        items = items.merge(target);
+    // println!("cb: {cache:?}");
+    if let Some(cached) = cache.has_item(&prod, &Source::Target) {
+        print!("cache");
+        items = items.merge(cached);
     } else {
-        prefix += "Target didnt load</br>";
-    }
-    let walmart_res = get_price_of_walmart(prod).await;
-    if let Ok(walmart) = walmart_res {
-        items = items.merge(walmart);
-    } else {
-        prefix += "Walmart didnt load</br>";
-    }
-    let aldis_res = get_price_of_aldis(prod).await;
-    if let Ok(aldis) = aldis_res {
-        items = items.merge(aldis);
-    } else {
-        prefix += "Aldi didnt load</br>";
-    }
-    let meijer_res = get_price_of_meijer(prod).await;
-    if let Ok(meijer) = meijer_res {
-        items = items.merge(meijer);
-    } else {
-        prefix += "Meijer didnt load</br>";
-    }
-    if data_map["subs"] == "true" {
-        let sams_res = get_price_of_sams_club(prod).await;
-        if let Ok(sams) = sams_res {
-            items = items.merge(sams);
+        let target_res = get_price_of_target(&prod).await;
+        if let Ok(target) = target_res {
+            cache.insert(&prod, Source::Target, &target);
+            items = items.merge(target);
         } else {
-            prefix += "Sams Club didnt load</br>";
+            prefix += "Target didnt load</br>";
         }
     }
-    Ok(RawHtml(prefix + &items.to_html()))
+    if let Some(cached) = cache.has_item(&prod, &Source::Walmart) {
+        print!("cache");
+        items = items.merge(cached);
+    } else {
+        let walmart_res = get_price_of_walmart(&prod).await;
+        if let Ok(walmart) = walmart_res {
+            cache.insert(&prod, Source::Walmart, &walmart);
+            items = items.merge(walmart);
+        } else {
+            prefix += "Walmart didnt load</br>";
+        }
+    }
+    if let Some(cached) = cache.has_item(&prod, &Source::Aldi) {
+        items = items.merge(cached);
+        print!("cache");
+    } else {
+        let aldis_res = get_price_of_aldis(&prod).await;
+        if let Ok(aldis) = aldis_res {
+            cache.insert(&prod, Source::Aldi, &aldis);
+            items = items.merge(aldis);
+        } else {
+            prefix += "Aldi didnt load</br>";
+        }
+    }
+    if let Some(cached) = cache.has_item(&prod, &Source::Meijer) {
+        items = items.merge(cached);
+        print!("cache");
+    } else {
+        let meijer_res = get_price_of_meijer(&prod).await;
+        if let Ok(meijer) = meijer_res {
+            cache.insert(&prod, Source::Meijer, &meijer);
+            items = items.merge(meijer);
+        } else {
+            prefix += "Meijer didnt load</br>";
+        }
+    }
+    if data_map["subs"] == "true" {
+        if let Some(cached) = cache.has_item(&prod, &Source::Sams) {
+            items = items.merge(cached);
+            print!("cache");
+        } else {
+            let sams_res = get_price_of_sams_club(&prod).await;
+            if let Ok(sams) = sams_res {
+                cache.insert(&prod, Source::Sams, &sams);
+                items = items.merge(sams);
+            } else {
+                prefix += "Sams Club didnt load</br>";
+            }
+        }
+    }
+    if let Ok(filter) = filter {
+        items.filter_names(&filter);
+    }
+    items
+        .0
+        .retain(|i| data_map.contains_key(&format!("{}", &i.source) as &str));
+    if let Some(low) = data_map.get("low").and_then(|l| l.replace('$', "").parse::<f64>().ok()) {
+        items.0.retain(|i| i.price >= low);
+    }
+    if let Some(high) = data_map.get("high").and_then(|l| l.replace('$', "").parse::<f64>().ok()) {
+        items.0.retain(|i| i.price <= high);
+    }
+    items = items.page(page-1);
+    // println!("ce: {cache:?}");
+    if page==1 {
+    Ok(RawHtml(prefix + &items.to_html_top() + r##"<a href="#top"><button style="
+  left: 46%;
+  position: relative;
+" hx-trigger="click" hx-target="#results" hx-include="#form" hx-post="/search/2" hx-indicator="#load" >Next page</button></a>"##)) 
+    } else {
+    Ok(RawHtml(prefix + &items.to_html()+ &format!(r##"<a href="#top"><button style="
+  right: 46%;
+  position: relative;
+" hx-trigger="click" hx-target="#results" hx-include="#form" hx-post="/search/{}" hx-indicator="#load" >Prev page</button><button style="
+  left: 46%;
+  position: relative;
+" hx-trigger="click" hx-target="#results" hx-include="#form" hx-post="/search/{}" hx-indicator="#load" >Prev page</button></a>"##, page-1, page+1)) )
+    }
+    // Ok(RawHtml(items.to_html()))
 }
 
 #[launch]
 fn rocket() -> _ {
-    rocket::build().mount("/", routes![index, search])
+    rocket::build()
+        .mount("/", routes![index, search, stores, form])
+        .manage(Cache::default())
 }
