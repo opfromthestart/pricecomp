@@ -1,0 +1,2996 @@
+{
+	"status": "OK",
+	"payload": {
+		"isCached": false,
+		"sortPropertyList": [
+			{
+				"name": "Relevance",
+				"id": "relevance",
+				"order": "Ascending",
+				"isActive": true
+			},
+			{
+				"name": "Member Rating",
+				"id": "p_product_rating",
+				"order": "Ascending",
+				"isActive": false
+			},
+			{
+				"name": "Price",
+				"id": "p_retail_sort",
+				"order": "Ascending",
+				"isActive": false
+			},
+			{
+				"name": "Top Seller",
+				"id": "p_sales_rank",
+				"order": "Descending",
+				"isActive": false
+			}
+		],
+		"showOtherRefinements": true,
+		"productFinder": "",
+		"currentPage": 1,
+		"totalRecords": 25,
+		"records": [
+			{
+				"productId": "prod21160249",
+				"productType": "NORMALITEM",
+				"descriptors": {
+					"name": "Member's Mark Real Crumbled Bacon (20 oz.)",
+					"whyWeLoveIt": "<i>\"These are the best bacons bits out there right now. Less fatty pieces then other brands.\"</i> - <b>CB, Sam's Club Member</b>",
+					"productdescription": "Member's Mark Real Crumbled Bacon (20 oz.)"
+				},
+				"category": {
+					"categoryId": "1533",
+					"seoUrl": "/b/salad-dressing-croutons/1533",
+					"name": "Salad Dressing & Croutons"
+				},
+				"assets": {
+					"media": [
+						{
+							"mediaType": "video",
+							"mediaName": "6213364854001"
+						}
+					],
+					"template": "/shop/product/templates/samsShop_productType_typical.jsp"
+				},
+				"searchAndSeo": {
+					"keywords": "Bacon bits,bacon crumbles,Member's Mark,",
+					"name": "members-mark-real-crumbled-bacon-20-oz",
+					"url": "/p/members-mark-real-crumbled-bacon-20-oz/prod21160249"
+				},
+				"shippingOption": {
+					"info": "Standard"
+				},
+				"manufacturingInfo": {
+					"brand": "Member's Mark"
+				},
+				"reviewsAndRatings": {
+					"numReviews": 7484,
+					"avgRating": 4.7334,
+					"avgRecommended": 0.19,
+					"isEligibleForAskAndAnswer": true
+				},
+				"skus": [
+					{
+						"skuId": "sku21714275",
+						"productId": "prod21160249",
+						"onlineOffer": {
+							"productId": "prod21160249",
+							"unitofMeasureUnitPrice": "OZ",
+							"gtin": "7874220297",
+							"id": "prod21160249_sku21714275_6279",
+							"inventory": {
+								"status": "AVAILABLE",
+								"availableTotalQty": 1061,
+								"availableToSellQuantity": 1061,
+								"qtySold": -1,
+								"qtyLeft": -1
+							},
+							"itemNumber": "980010593",
+							"mdsFamId": "53478453",
+							"offerStatus": "PURCHASABLE",
+							"onlineOfferProperties": [
+								"MERCHANT_AUTHORIZED",
+								"TAX_EXEMPT",
+								"IS_ACTIVE",
+								"AIR_SHIPPABLE",
+								"DISCOUNT_INDICATOR",
+								"UNIT_PRICE_ITEM"
+							],
+							"price": {
+								"type": "FIXED",
+								"finalPrice": {
+									"amount": 8.98,
+									"currency": "USD"
+								},
+								"startPrice": {
+									"amount": 8.98,
+									"currency": "USD"
+								},
+								"priceStatus": "ACTIVE",
+								"priceDisplayOption": "SHOW",
+								"unitPrice": {
+									"amount": 0.45,
+									"currency": "USD"
+								}
+							},
+							"status": "A",
+							"sellQtyUnitofMeasure": "OZ",
+							"mapOptions": "SHOW",
+							"offerLogistics": {
+								"packSizeUnitPrice": 20
+							},
+							"inventorySourceNetwork": "OWNED",
+							"skuId": "sku21714275",
+							"clubId": 6279,
+							"offerId": "prod21160249_sku21714275",
+							"recommendedDisplayOffer": true
+						},
+						"descriptors": {
+							"name": "Member's Mark Real Crumbled Bacon (20 oz.)",
+							"comments": "Republish OAR 8-1-23 Final"
+						},
+						"assets": {
+							"image": "0007874220297_A",
+							"ekoVideo": {
+								"url": "https://play.eko.com/embed?publisherID=samsclub&id=6213364854001"
+							}
+						},
+						"shippingOption": {
+							"info": "Standard",
+							"costType": "Calculated",
+							"flag": "freeEligible",
+							"isAirShippable": true
+						},
+						"type": "NORMAL_SKU",
+						"fulfillmentChannels": [
+							"CLUB_PICKUP",
+							"D2H"
+						],
+						"merchandiseCategory": 46,
+						"merchandiseSubCategory": 19,
+						"shippingMethods": [
+							"STANDARD"
+						],
+						"skuProperties": [
+							"AIR_SHIPPABLE"
+						],
+						"status": "ACTIVE",
+						"itemPolicies": [],
+						"recommendedDisplayChannel": "ONLINE"
+					}
+				],
+				"expiresAt": "2024-04-21T03:17:48.075Z",
+				"cached": true,
+				"id": "prod21160249",
+				"prodProperties": [
+					"MERCHANT_AUTHORIZED",
+					"ELIGIBLE_FOR_ASKANDANSWER"
+				],
+				"legacyProductType": "NORMALITEM",
+				"parentCategories": [
+					"9237",
+					"15190875",
+					"1678",
+					"17080227",
+					"1533",
+					"12520102",
+					"3500103",
+					"15190193",
+					"11400111",
+					"16290145",
+					"13820158",
+					"15800411",
+					"15700126",
+					"15940857",
+					"8216",
+					"15810314",
+					"15190754",
+					"15050106",
+					"16761206",
+					"2920101",
+					"15050108"
+				],
+				"status": "ACTIVE",
+				"itemPolicies": [],
+				"hasPromotion": false,
+				"isOOS": false,
+				"freeWarranty": false,
+				"transformed": true,
+				"originalIndex": 22
+			},
+			{
+				"productId": "prod20353151",
+				"productType": "PERISHABLEFOOD",
+				"descriptors": {
+					"name": "Applegate Uncured Sunday Bacon (8 oz., 3 pks.)",
+					"productdescription": "Applegate Uncured Sunday Bacon (8 oz., 3 pks.)"
+				},
+				"category": {
+					"categoryId": "1549",
+					"seoUrl": "/b/bacon-sausage/1549",
+					"name": "Bacon & Sausage"
+				},
+				"assets": {
+					"template": "/shop/product/templates/samsShop_productType_typical.jsp"
+				},
+				"searchAndSeo": {
+					"keywords": "Applegate,applegate naturals,applegate bacon,hickory smoked bacon,hickory smoked uncured sunday bacon,sunday bacon,uncured sunday bacon,bacon,smoked bacon,gluten free bacon,casein free bacon,pork bacon,applegate sunday bacon,",
+					"name": "applegate-uncured-sunday-bacon",
+					"url": "/p/applegate-uncured-sunday-bacon/prod20353151"
+				},
+				"manufacturingInfo": {
+					"brand": "Applegate"
+				},
+				"reviewsAndRatings": {
+					"numReviews": 232,
+					"avgRating": 4.3233,
+					"avgRecommended": 0.25,
+					"isEligibleForAskAndAnswer": true
+				},
+				"skus": [
+					{
+						"skuId": "sku20866495",
+						"productId": "prod20353151",
+						"descriptors": {
+							"name": "Applegate Uncured Sunday Bacon (8 oz., 3 pks.)"
+						},
+						"assets": {
+							"image": "0002531733100_A"
+						},
+						"shippingOption": {
+							"costType": "Calculated",
+							"flag": "freeEligible",
+							"isAirShippable": true
+						},
+						"type": "NORMAL_SKU",
+						"fulfillmentChannels": [
+							"CLUB_PICKUP",
+							"D2H"
+						],
+						"merchandiseCategory": 57,
+						"merchandiseSubCategory": 39,
+						"skuProperties": [
+							"AIR_SHIPPABLE",
+							"AVAILABLE_SEPARATELY"
+						],
+						"status": "ACTIVE",
+						"itemPolicies": []
+					}
+				],
+				"expiresAt": "2024-04-21T03:17:48.075Z",
+				"cached": true,
+				"id": "prod20353151",
+				"prodProperties": [
+					"ELIGIBLE_FOR_ASKANDANSWER",
+					"MERCHANT_AUTHORIZED"
+				],
+				"legacyProductType": "PERISHABLEFOOD",
+				"parentCategories": [
+					"1549"
+				],
+				"status": "ACTIVE",
+				"itemPolicies": [],
+				"hasPromotion": false,
+				"isOOS": true,
+				"freeWarranty": false,
+				"transformed": true,
+				"originalIndex": 0
+			},
+			{
+				"productId": "prod22910875",
+				"productType": "NORMALITEM",
+				"descriptors": {
+					"name": "Hormel Black Label, Thick Cut Bacon 3 lbs.",
+					"productdescription": "Hormel Black Label, Thick Cut Bacon 3 lbs."
+				},
+				"category": {
+					"categoryId": "1549",
+					"seoUrl": "/b/bacon-sausage/1549",
+					"name": "Bacon & Sausage"
+				},
+				"assets": {
+					"template": "/shop/product/templates/samsShop_productType_typical.jsp"
+				},
+				"searchAndSeo": {
+					"keywords": "hormel,foods,hormel foods,black,label,black label,hormel bacon,pork,thick,slice,slices,thick slices,thick cut,value,value pack,bacon,hormel bacon,12591,Hormel Black Label,Thick Slice Bacon (3 lb.),thick sliced bacon,thick slice bacon,thick-sliced-bacon-hormel-3lb",
+					"name": "hormel-black-label-thick-cut-bacon-3lbs",
+					"url": "/p/hormel-black-label-thick-cut-bacon-3lbs/prod22910875"
+				},
+				"manufacturingInfo": {
+					"model": "84311",
+					"brand": "Hormel",
+					"additionalInfo": "For additional questions or concerns regarding this product, please contact Hormel Customer Support Line: 1 (800) 523-4635"
+				},
+				"reviewsAndRatings": {
+					"numReviews": 3989,
+					"avgRating": 4.5713,
+					"avgRecommended": 0.13,
+					"isEligibleForAskAndAnswer": true
+				},
+				"skus": [
+					{
+						"skuId": "sku23465516",
+						"productId": "prod22910875",
+						"descriptors": {
+							"name": "Hormel Black Label, Thick Cut Bacon (3 lbs.)"
+						},
+						"assets": {
+							"image": "0003760085048_A"
+						},
+						"shippingOption": {
+							"costType": "Included",
+							"flag": "included",
+							"isAirShippable": true
+						},
+						"type": "NORMAL_SKU",
+						"fulfillmentChannels": [
+							"CLUB_PICKUP",
+							"D2H"
+						],
+						"merchandiseCategory": 42,
+						"merchandiseSubCategory": 30,
+						"skuProperties": [
+							"AVAILABLE_SEPARATELY",
+							"AIR_SHIPPABLE"
+						],
+						"status": "ACTIVE",
+						"itemPolicies": []
+					}
+				],
+				"expiresAt": "2024-04-21T03:17:48.075Z",
+				"cached": true,
+				"id": "prod22910875",
+				"prodProperties": [
+					"OFFLINE_WHEN_OOS",
+					"MERCHANT_AUTHORIZED",
+					"ELIGIBLE_FOR_ASKANDANSWER"
+				],
+				"legacyProductType": "NORMALITEM",
+				"parentCategories": [
+					"1549",
+					"15800411"
+				],
+				"status": "ACTIVE",
+				"itemPolicies": [],
+				"hasPromotion": false,
+				"isOOS": true,
+				"freeWarranty": false,
+				"transformed": true,
+				"originalIndex": 1
+			},
+			{
+				"productId": "prod23201244",
+				"productType": "NORMALITEM",
+				"descriptors": {
+					"name": "Hormel Black Label Fully Cooked Bacon (10.5 oz., 72 ct.)",
+					"productdescription": "Hormel Black Label Fully Cooked Bacon (10.5 oz., 72 ct.)"
+				},
+				"category": {
+					"categoryId": "1549",
+					"seoUrl": "/b/bacon-sausage/1549",
+					"name": "Bacon & Sausage"
+				},
+				"assets": {
+					"template": "/shop/product/templates/samsShop_productType_typical.jsp"
+				},
+				"searchAndSeo": {
+					"keywords": "hormel black label fully cooked bacon,cooked bacon,easy preparation bacon",
+					"name": "hormel-black-label-fully-cooked-bacon-72ct",
+					"url": "/p/hormel-black-label-fully-cooked-bacon-72ct/prod23201244"
+				},
+				"manufacturingInfo": {
+					"model": "85542",
+					"brand": "Hormel"
+				},
+				"reviewsAndRatings": {
+					"numReviews": 6762,
+					"avgRating": 4.7488,
+					"avgRecommended": 0.16,
+					"isEligibleForAskAndAnswer": true
+				},
+				"skus": [
+					{
+						"skuId": "sku23755319",
+						"productId": "prod23201244",
+						"descriptors": {
+							"name": "Hormel Black Label Fully Cooked Bacon (10.5 oz., 72 ct.)"
+						},
+						"assets": {
+							"image": "0003760084296_A"
+						},
+						"shippingOption": {
+							"costType": "Included",
+							"flag": "included",
+							"isAirShippable": true
+						},
+						"type": "NORMAL_SKU",
+						"fulfillmentChannels": [
+							"IN_CLUB_ONLY"
+						],
+						"merchandiseCategory": 42,
+						"merchandiseSubCategory": 31,
+						"manufacturingInfo": {
+							"model": "85542"
+						},
+						"skuProperties": [
+							"AIR_SHIPPABLE",
+							"AVAILABLE_SEPARATELY"
+						],
+						"status": "ACTIVE",
+						"itemPolicies": []
+					}
+				],
+				"expiresAt": "2024-04-21T03:17:48.075Z",
+				"cached": true,
+				"id": "prod23201244",
+				"prodProperties": [
+					"ELIGIBLE_FOR_ASKANDANSWER",
+					"MERCHANT_AUTHORIZED"
+				],
+				"legacyProductType": "NORMALITEM",
+				"parentCategories": [
+					"2038",
+					"2173",
+					"15940857",
+					"1549"
+				],
+				"status": "ACTIVE",
+				"itemPolicies": [],
+				"hasPromotion": false,
+				"isOOS": true,
+				"freeWarranty": false,
+				"transformed": true,
+				"originalIndex": 2
+			},
+			{
+				"productId": "prod16270010",
+				"productType": "NORMALITEM",
+				"descriptors": {
+					"name": "Wright® Brand Thick Sliced Hickory Smoked Bacon 4 lbs.",
+					"productdescription": "Wright® Brand Thick Sliced Hickory Smoked Bacon 4 lbs."
+				},
+				"category": {
+					"categoryId": "1549",
+					"seoUrl": "/b/bacon-sausage/1549",
+					"name": "Bacon & Sausage"
+				},
+				"assets": {
+					"template": "/shop/product/templates/samsShop_productType_typical.jsp"
+				},
+				"searchAndSeo": {
+					"keywords": "bacon,bacons,wright,wright brand,tyson,smoked,hickory,hickory smoked,breakfast,cured,",
+					"name": "wright-naturally-smoked-hickory-bacon-thick-sliced-4lbs",
+					"url": "/p/wright-naturally-smoked-hickory-bacon-thick-sliced-4lbs/prod16270010"
+				},
+				"shippingOption": {
+					"info": "Standard"
+				},
+				"manufacturingInfo": {
+					"model": "10262060616",
+					"brand": "Wright Brand"
+				},
+				"reviewsAndRatings": {
+					"numReviews": 5665,
+					"avgRating": 4.7539,
+					"avgRecommended": 0.19,
+					"isEligibleForAskAndAnswer": true
+				},
+				"promotions": [
+					{
+						"promotionText": "<p></p>\n",
+						"channel": "WEB"
+					},
+					{
+						"promotionText": "<p></p>\n",
+						"channel": "APP"
+					}
+				],
+				"skus": [
+					{
+						"skuId": "sku794658",
+						"productId": "prod16270010",
+						"descriptors": {
+							"name": "Wright® Brand Thick Sliced Hickory Smoked Bacon (4 lbs.)"
+						},
+						"assets": {
+							"image": "0007962100348_A"
+						},
+						"shippingOption": {
+							"info": "Standard",
+							"costType": "Calculated",
+							"flag": "freeEligible",
+							"isAirShippable": true
+						},
+						"type": "NORMAL_SKU",
+						"fulfillmentChannels": [
+							"CLUB_PICKUP",
+							"D2H"
+						],
+						"merchandiseCategory": 42,
+						"merchandiseSubCategory": 30,
+						"shippingMethods": [
+							"STANDARD"
+						],
+						"skuProperties": [
+							"AIR_SHIPPABLE"
+						],
+						"status": "ACTIVE",
+						"itemPolicies": []
+					}
+				],
+				"expiresAt": "2024-04-21T03:17:48.075Z",
+				"cached": true,
+				"id": "prod16270010",
+				"prodProperties": [
+					"MERCHANT_AUTHORIZED",
+					"ELIGIBLE_FOR_ASKANDANSWER"
+				],
+				"legacyProductType": "NORMALITEM",
+				"parentCategories": [
+					"3350101",
+					"16890386",
+					"2267",
+					"1549"
+				],
+				"status": "ACTIVE",
+				"itemPolicies": [],
+				"hasPromotion": false,
+				"isOOS": true,
+				"freeWarranty": false,
+				"transformed": true,
+				"originalIndex": 3
+			},
+			{
+				"productId": "prod21428808",
+				"productType": "NORMALITEM",
+				"descriptors": {
+					"name": "Member's Mark Naturally Hickory Smoked Bacon 3 lbs.",
+					"whyWeLoveIt": "<p>You can never have enough bacon! Three pounds will feed the whole family (and any guests too) and 80 calories per serving means bacon all day, every day.</p>",
+					"whyWeLoveItTitle": "Why we love this",
+					"productdescription": "Member's Mark Naturally Hickory Smoked Bacon 3 lbs."
+				},
+				"category": {
+					"categoryId": "1549",
+					"seoUrl": "/b/bacon-sausage/1549",
+					"name": "Bacon & Sausage"
+				},
+				"assets": {
+					"template": "/shop/product/templates/samsShop_productType_typical.jsp"
+				},
+				"searchAndSeo": {
+					"keywords": "Members Mark Bacon,78742267040,980067141,Hickory Smoked,multi packs,gluten free,no MSG,MSG free",
+					"name": "members-mark-naturally-hickory-smoked-bacon-3-pack",
+					"url": "/p/members-mark-naturally-hickory-smoked-bacon-3-pack/prod21428808"
+				},
+				"manufacturingInfo": {
+					"model": "90596517",
+					"brand": "Member's Mark"
+				},
+				"reviewsAndRatings": {
+					"numReviews": 5011,
+					"avgRating": 4.455,
+					"avgRecommended": 0.14,
+					"isEligibleForAskAndAnswer": true
+				},
+				"skus": [
+					{
+						"skuId": "sku21982630",
+						"productId": "prod21428808",
+						"descriptors": {
+							"name": "Member's Mark Naturally Hickory Smoked Bacon (3 lbs.)",
+							"comments": "Republish OAR 8-1-23"
+						},
+						"assets": {
+							"image": "0007874226704_A"
+						},
+						"shippingOption": {
+							"costType": "Calculated",
+							"flag": "freeEligible",
+							"isAirShippable": true
+						},
+						"type": "NORMAL_SKU",
+						"fulfillmentChannels": [
+							"CLUB_PICKUP",
+							"D2H"
+						],
+						"merchandiseCategory": 42,
+						"merchandiseSubCategory": 30,
+						"manufacturingInfo": {
+							"model": "90596517"
+						},
+						"skuProperties": [
+							"AVAILABLE_SEPARATELY",
+							"AIR_SHIPPABLE"
+						],
+						"status": "ACTIVE",
+						"itemPolicies": []
+					}
+				],
+				"expiresAt": "2024-04-21T03:17:48.075Z",
+				"cached": true,
+				"id": "prod21428808",
+				"prodProperties": [
+					"MERCHANT_AUTHORIZED",
+					"ELIGIBLE_FOR_ASKANDANSWER"
+				],
+				"legacyProductType": "NORMALITEM",
+				"parentCategories": [
+					"15941492",
+					"8260101",
+					"7730117",
+					"16861148",
+					"7130130",
+					"1679",
+					"9030104",
+					"17080222",
+					"11400111",
+					"15050106",
+					"15050108",
+					"9237",
+					"1473",
+					"13360111",
+					"18270113",
+					"15190875",
+					"16860220",
+					"17080490",
+					"2038",
+					"360207",
+					"360205",
+					"15190193",
+					"360203",
+					"1549",
+					"2173",
+					"16230450"
+				],
+				"status": "ACTIVE",
+				"itemPolicies": [],
+				"hasPromotion": false,
+				"isOOS": true,
+				"freeWarranty": false,
+				"transformed": true,
+				"originalIndex": 4
+			},
+			{
+				"productId": "prod16610108",
+				"productType": "NORMALITEM",
+				"descriptors": {
+					"name": "Member's Mark Restaurant Style Bacon 10 lbs.",
+					"whyWeLoveIt": "<p>Slices of bacon are already laid out on each sheet so all you have to do is pop them into the oven! No need for peeling, getting messy and cleaning up.</p>",
+					"productdescription": "Member's Mark Restaurant Style Bacon 10 lbs."
+				},
+				"category": {
+					"categoryId": "1549",
+					"seoUrl": "/b/bacon-sausage/1549",
+					"name": "Bacon & Sausage"
+				},
+				"assets": {
+					"template": "/shop/product/templates/samsShop_productType_typical.jsp"
+				},
+				"searchAndSeo": {
+					"keywords": "Bacon,daily chef,food service,breakfast,pork,pork belly,member's mark,members mark",
+					"name": "members-mark-restaurant-style-bacon-10lbs",
+					"url": "/p/members-mark-restaurant-style-bacon-10lbs/prod16610108"
+				},
+				"manufacturingInfo": {
+					"model": "20525010",
+					"brand": "Member's Mark"
+				},
+				"reviewsAndRatings": {
+					"numReviews": 1587,
+					"avgRating": 4.414,
+					"avgRecommended": 0.24,
+					"isEligibleForAskAndAnswer": true
+				},
+				"skus": [
+					{
+						"skuId": "sku17124180",
+						"productId": "prod16610108",
+						"descriptors": {
+							"name": "Member's Mark Restaurant Style Bacon (10 lbs.)"
+						},
+						"assets": {
+							"image": "0007874206905_A"
+						},
+						"shippingOption": {
+							"costType": "Calculated",
+							"flag": "freeEligible",
+							"isAirShippable": true
+						},
+						"type": "NORMAL_SKU",
+						"fulfillmentChannels": [
+							"CLUB_PICKUP",
+							"D2H"
+						],
+						"merchandiseCategory": 42,
+						"merchandiseSubCategory": 29,
+						"manufacturingInfo": {
+							"model": "20525010"
+						},
+						"skuProperties": [
+							"AVAILABLE_SEPARATELY",
+							"AIR_SHIPPABLE"
+						],
+						"status": "ACTIVE",
+						"itemPolicies": []
+					}
+				],
+				"expiresAt": "2024-04-21T03:17:48.075Z",
+				"cached": true,
+				"id": "prod16610108",
+				"prodProperties": [
+					"MERCHANT_AUTHORIZED",
+					"ELIGIBLE_FOR_ASKANDANSWER"
+				],
+				"legacyProductType": "NORMALITEM",
+				"parentCategories": [
+					"11400111",
+					"16860220",
+					"1549",
+					"13360111",
+					"16861148",
+					"17080222"
+				],
+				"status": "ACTIVE",
+				"itemPolicies": [],
+				"hasPromotion": false,
+				"isOOS": true,
+				"freeWarranty": false,
+				"transformed": true,
+				"originalIndex": 5
+			},
+			{
+				"productId": "P990322047",
+				"productType": "NORMALITEM",
+				"descriptors": {
+					"name": "Smithfield Hometown Original Bacon, 16 oz., 3 pk.",
+					"productdescription": "Smithfield Hometown Original Bacon, 16 oz., 3 pk."
+				},
+				"category": {
+					"categoryId": "1549",
+					"seoUrl": "/b/bacon-sausage/1549",
+					"name": "Bacon & Sausage"
+				},
+				"assets": {
+					"template": "/shop/product/templates/samsShop_productType_typical.jsp"
+				},
+				"searchAndSeo": {
+					"name": "smithfield-hometown-original-bacon-16-oz-3-pk",
+					"url": "/p/smithfield-hometown-original-bacon-16-oz-3-pk/P990322047"
+				},
+				"manufacturingInfo": {
+					"brand": "Smithfield"
+				},
+				"reviewsAndRatings": {
+					"numReviews": 384,
+					"avgRating": 4.5469,
+					"avgRecommended": 0.09,
+					"isEligibleForAskAndAnswer": true
+				},
+				"skus": [
+					{
+						"skuId": "IG03088232",
+						"productId": "P990322047",
+						"descriptors": {
+							"name": "Smithfield Hometown Original Bacon, 16 oz., 3 pk.",
+							"longDescription": "Smithfield Hometown Original Bacon, available at Sam's Club, is a savory delight that elevates breakfast to a whole new level. Crafted with care and culinary expertise, this bacon promises a taste that is unmatched in quality and flavor. Made from premium cuts of pork, each slice embodies the perfect balance of meaty goodness and crispy perfection.\n\nWhat sets Smithfield Hometown Original Bacon apart is its commitment to authenticity. The bacon is carefully smoked using traditional methods, giving it a rich and robust flavor that harks back to the timeless art of bacon-making. Whether you're sizzling it in a pan or baking it to crispy perfection, the aroma that fills your kitchen is a testament to the high-quality craftsmanship that goes into every pack.\n\nWhen you choose Smithfield Hometown Original Bacon at Sam's Club, you're not just buying bacon; you're investing in a culinary experience. The generous portions in each pack make it ideal for family breakfasts or brunch gatherings with friends. Plus, with the convenience of purchasing it at Sam's Club, you not only enjoy exceptional taste but also great value.\n\nIndulge in the rich, smoky goodness of Smithfield Hometown Original Bacon – a culinary essential that transforms every meal into a delicious celebration of flavor and quality. Your breakfast deserves the best, and that's exactly what you get with Smithfield Hometown Original Bacon from Sam's Club.<br>"
+						},
+						"assets": {
+							"image": "0007080022726_A"
+						},
+						"shippingOption": {
+							"costType": "Calculated",
+							"flag": "freeEligible",
+							"isAirShippable": true
+						},
+						"type": "NORMAL_SKU",
+						"fulfillmentChannels": [
+							"CLUB_PICKUP",
+							"D2H"
+						],
+						"merchandiseCategory": 42,
+						"merchandiseSubCategory": 30,
+						"skuProperties": [
+							"SHIP_AS_IS_FLAG",
+							"AIR_SHIPPABLE",
+							"AVAILABLE_SEPARATELY"
+						],
+						"status": "ACTIVE",
+						"itemPolicies": []
+					}
+				],
+				"expiresAt": "2024-04-21T03:17:48.075Z",
+				"cached": true,
+				"id": "P990322047",
+				"prodProperties": [
+					"ELIGIBLE_FOR_ASKANDANSWER",
+					"MERCHANT_AUTHORIZED"
+				],
+				"legacyProductType": "NORMALITEM",
+				"parentCategories": [
+					"1549"
+				],
+				"createdOn": "2023-12-06T03:43:44.000Z",
+				"status": "ACTIVE",
+				"itemPolicies": [],
+				"hasPromotion": false,
+				"isOOS": true,
+				"freeWarranty": false,
+				"transformed": true,
+				"originalIndex": 6
+			},
+			{
+				"productId": "P03030172",
+				"productType": "NORMALITEM",
+				"descriptors": {
+					"name": "Member's Mark Fully Cooked Bacon (10.5 oz.)",
+					"whyWeLoveIt": "Savor the convenience of Member's Mark™ Fully Cooked Bacon from Sam's Club—delicious, time-saving and versatile for any meal or occasion.",
+					"productdescription": "Member's Mark Fully Cooked Bacon (10.5 oz.)"
+				},
+				"category": {
+					"categoryId": "1549",
+					"seoUrl": "/b/bacon-sausage/1549",
+					"name": "Bacon & Sausage"
+				},
+				"assets": {
+					"template": "/shop/product/templates/samsShop_productType_typical.jsp"
+				},
+				"searchAndSeo": {
+					"name": "members-mark-fully-cooked-bacon-10-5-oz",
+					"url": "/p/members-mark-fully-cooked-bacon-10-5-oz/P03030172"
+				},
+				"manufacturingInfo": {
+					"brand": "Member's Mark"
+				},
+				"reviewsAndRatings": {
+					"numReviews": 360,
+					"avgRating": 4.3639,
+					"avgRecommended": 0.2,
+					"isEligibleForAskAndAnswer": true
+				},
+				"skus": [
+					{
+						"skuId": "IG03033855",
+						"productId": "P03030172",
+						"descriptors": {
+							"name": "Member's Mark Fully Cooked Bacon (10.5 oz.)",
+							"longDescription": "Customers should choose Member's Mark Fully Cooked Bacon from Sam's Club for a delightful and convenient bacon experience like no other. This premium bacon option offers a plethora of reasons to make it your go-to choice.\n\nFirst and foremost, Member's Mark Fully Cooked Bacon is all about saving you time without compromising on taste. It's fully cooked to perfection, eliminating the need for messy and time-consuming frying. Whether you're whipping up a hearty breakfast, adding a savory twist to your sandwich, or garnishing your favorite salad, this bacon is ready to use in seconds.\n\nThe flavor and quality of this bacon are second to none. Crafted from carefully selected cuts of pork, it boasts a rich and smoky taste that's bound to satisfy even the most discerning bacon lovers. Plus, it's perfectly seasoned to achieve that ideal balance between crispy and tender, ensuring a mouthwatering bite every time.\n\nWith Member's Mark Fully Cooked Bacon, you're not just getting exceptional quality; you're also getting quantity. Each pack is generously sized to meet the demands of households of all sizes, making it ideal for family breakfasts or brunch gatherings with friends.\n\nAdditionally, purchasing this bacon from Sam's Club offers unbeatable value. Sam's Club is known for providing high-quality products at competitive prices, and Member's Mark Fully Cooked Bacon is no exception. You'll get more bang for your buck, making it a budget-friendly choice.\n\nIn summary, Member's Mark Fully Cooked Bacon from Sam's Club offers customers unparalleled convenience, exceptional flavor and quality, generous quantities, and fantastic value. Elevate your culinary creations and simplify your meal prep with this delicious, hassle-free bacon option.\n\n\n\n\n<br>"
+						},
+						"assets": {
+							"image": "0019396833347_A"
+						},
+						"shippingOption": {
+							"costType": "Calculated",
+							"flag": "freeEligible",
+							"isAirShippable": true
+						},
+						"type": "NORMAL_SKU",
+						"fulfillmentChannels": [
+							"CLUB_PICKUP",
+							"D2H"
+						],
+						"merchandiseCategory": 42,
+						"merchandiseSubCategory": 31,
+						"skuProperties": [
+							"AVAILABLE_SEPARATELY",
+							"AIR_SHIPPABLE"
+						],
+						"status": "ACTIVE",
+						"itemPolicies": []
+					}
+				],
+				"expiresAt": "2024-04-21T03:17:48.075Z",
+				"cached": true,
+				"id": "P03030172",
+				"prodProperties": [
+					"MERCHANT_AUTHORIZED",
+					"ELIGIBLE_FOR_ASKANDANSWER"
+				],
+				"legacyProductType": "NORMALITEM",
+				"parentCategories": [
+					"1549",
+					"16860220"
+				],
+				"createdOn": "2023-10-11T14:37:23.000Z",
+				"status": "ACTIVE",
+				"itemPolicies": [],
+				"hasPromotion": false,
+				"isOOS": true,
+				"freeWarranty": false,
+				"transformed": true,
+				"originalIndex": 7
+			},
+			{
+				"productId": "P03013865",
+				"productType": "NORMALITEM",
+				"descriptors": {
+					"name": "Smithfield Fully Cooked Bacon (10.5 oz., 72 ct.)",
+					"productdescription": "Smithfield Fully Cooked Bacon (10.5 oz., 72 ct.)"
+				},
+				"category": {
+					"categoryId": "1549",
+					"seoUrl": "/b/bacon-sausage/1549",
+					"name": "Bacon & Sausage"
+				},
+				"assets": {
+					"template": "/shop/product/templates/samsShop_productType_typical.jsp"
+				},
+				"searchAndSeo": {
+					"name": "smithfield-fully-cooked-bacon-10-5-oz",
+					"url": "/p/smithfield-fully-cooked-bacon-10-5-oz/P03013865"
+				},
+				"shippingOption": {
+					"info": "Standard"
+				},
+				"manufacturingInfo": {
+					"brand": "Smithfield"
+				},
+				"reviewsAndRatings": {
+					"numReviews": 912,
+					"avgRating": 4.341,
+					"avgRecommended": 0.17,
+					"isEligibleForAskAndAnswer": true
+				},
+				"skus": [
+					{
+						"skuId": "IG03030348",
+						"productId": "P03013865",
+						"descriptors": {
+							"name": "Smithfield Fully Cooked Bacon (10.5 oz., 72 ct.)",
+							"longDescription": "Fully Cooked Bacon<br>"
+						},
+						"assets": {
+							"image": "0007080022529_A"
+						},
+						"shippingOption": {
+							"info": "Standard",
+							"costType": "Calculated",
+							"flag": "paid",
+							"isAirShippable": true
+						},
+						"type": "NORMAL_SKU",
+						"fulfillmentChannels": [
+							"CLUB_PICKUP",
+							"D2H"
+						],
+						"merchandiseCategory": 42,
+						"merchandiseSubCategory": 31,
+						"shippingMethods": [
+							"STANDARD"
+						],
+						"skuProperties": [
+							"AVAILABLE_SEPARATELY",
+							"AIR_SHIPPABLE"
+						],
+						"status": "ACTIVE",
+						"itemPolicies": []
+					}
+				],
+				"expiresAt": "2024-04-21T03:17:48.075Z",
+				"cached": true,
+				"id": "P03013865",
+				"prodProperties": [
+					"OFFLINE_WHEN_OOS",
+					"MERCHANT_AUTHORIZED",
+					"ELIGIBLE_FOR_ASKANDANSWER"
+				],
+				"legacyProductType": "NORMALITEM",
+				"parentCategories": [
+					"1549"
+				],
+				"createdOn": "2022-11-17T19:01:56.000Z",
+				"status": "ACTIVE",
+				"itemPolicies": [],
+				"hasPromotion": false,
+				"isOOS": true,
+				"freeWarranty": false,
+				"transformed": true,
+				"originalIndex": 8
+			},
+			{
+				"productId": "prod26460170",
+				"productType": "NORMALITEM",
+				"descriptors": {
+					"name": "Hormel Black Label, Thick Cut Bacon 3 lbs.",
+					"productdescription": "Hormel Black Label, Thick Cut Bacon 3 lbs."
+				},
+				"category": {
+					"categoryId": "1549",
+					"seoUrl": "/b/bacon-sausage/1549",
+					"name": "Bacon & Sausage"
+				},
+				"assets": {
+					"template": "/shop/product/templates/samsShop_productType_typical.jsp"
+				},
+				"searchAndSeo": {
+					"name": "hormel-black-label-thick-cut-bacon",
+					"url": "/p/hormel-black-label-thick-cut-bacon/prod26460170"
+				},
+				"shippingOption": {
+					"info": "Standard"
+				},
+				"manufacturingInfo": {
+					"model": "2265594186",
+					"brand": "Hormel Black Label"
+				},
+				"reviewsAndRatings": {
+					"numReviews": 135,
+					"avgRating": 4.5111,
+					"avgRecommended": 0.09,
+					"isEligibleForAskAndAnswer": true
+				},
+				"skus": [
+					{
+						"skuId": "sku27014171",
+						"productId": "prod26460170",
+						"descriptors": {
+							"name": "Hormel Black Label, Thick Cut Bacon (3 lbs.)"
+						},
+						"assets": {
+							"image": "0003760011657_A"
+						},
+						"shippingOption": {
+							"info": "Standard",
+							"costType": "Calculated",
+							"flag": "freeEligible",
+							"isAirShippable": true
+						},
+						"type": "NORMAL_SKU",
+						"fulfillmentChannels": [
+							"CLUB_PICKUP",
+							"D2H"
+						],
+						"merchandiseCategory": 42,
+						"merchandiseSubCategory": 30,
+						"manufacturingInfo": {
+							"model": "2265594186"
+						},
+						"shippingMethods": [
+							"STANDARD"
+						],
+						"skuProperties": [
+							"AVAILABLE_SEPARATELY",
+							"AIR_SHIPPABLE"
+						],
+						"status": "ACTIVE",
+						"itemPolicies": []
+					}
+				],
+				"expiresAt": "2024-04-21T03:17:48.075Z",
+				"cached": true,
+				"id": "prod26460170",
+				"prodProperties": [
+					"MERCHANT_AUTHORIZED",
+					"ELIGIBLE_FOR_ASKANDANSWER"
+				],
+				"legacyProductType": "NORMALITEM",
+				"parentCategories": [
+					"1549"
+				],
+				"status": "ACTIVE",
+				"itemPolicies": [],
+				"hasPromotion": false,
+				"isOOS": true,
+				"freeWarranty": false,
+				"transformed": true,
+				"originalIndex": 9
+			},
+			{
+				"productId": "P990324925",
+				"productType": "NORMALITEM",
+				"descriptors": {
+					"name": "Sugadale Hickory Smoked Bacon, 1 lb., 3 ct.",
+					"productdescription": "Sugadale Hickory Smoked Bacon, 1 lb., 3 ct."
+				},
+				"category": {
+					"categoryId": "1549",
+					"seoUrl": "/b/bacon-sausage/1549",
+					"name": "Bacon & Sausage"
+				},
+				"assets": {
+					"template": "/shop/product/templates/samsShop_productType_typical.jsp"
+				},
+				"searchAndSeo": {
+					"name": "sugadale-hickory-smoked-bacon-1-lb-3-ct",
+					"url": "/p/sugadale-hickory-smoked-bacon-1-lb-3-ct/P990324925"
+				},
+				"manufacturingInfo": {
+					"brand": "Sugardale"
+				},
+				"reviewsAndRatings": {
+					"numReviews": 53,
+					"avgRating": 4.4717,
+					"avgRecommended": 0.26,
+					"isEligibleForAskAndAnswer": true
+				},
+				"skus": [
+					{
+						"skuId": "IG03085916",
+						"productId": "P990324925",
+						"descriptors": {
+							"name": "Sugadale Hickory Smoked Bacon, 1 lb., 3 ct."
+						},
+						"assets": {
+							"image": "0007389000602_A"
+						},
+						"shippingOption": {
+							"costType": "Calculated",
+							"flag": "freeEligible",
+							"isAirShippable": true
+						},
+						"type": "NORMAL_SKU",
+						"fulfillmentChannels": [
+							"CLUB_PICKUP",
+							"D2H"
+						],
+						"merchandiseCategory": 42,
+						"merchandiseSubCategory": 30,
+						"skuProperties": [
+							"AIR_SHIPPABLE",
+							"SHIP_AS_IS_FLAG",
+							"AVAILABLE_SEPARATELY"
+						],
+						"status": "ACTIVE",
+						"itemPolicies": []
+					}
+				],
+				"expiresAt": "2024-04-21T03:17:48.075Z",
+				"cached": true,
+				"id": "P990324925",
+				"prodProperties": [
+					"ELIGIBLE_FOR_ASKANDANSWER",
+					"MERCHANT_AUTHORIZED"
+				],
+				"legacyProductType": "NORMALITEM",
+				"parentCategories": [
+					"1549"
+				],
+				"createdOn": "2023-11-21T12:37:46.000Z",
+				"status": "ACTIVE",
+				"itemPolicies": [],
+				"hasPromotion": false,
+				"isOOS": true,
+				"freeWarranty": false,
+				"transformed": true,
+				"originalIndex": 10
+			},
+			{
+				"productId": "156235",
+				"productType": "PERISHABLEFOOD",
+				"descriptors": {
+					"name": "Farmland Hickory Smoked Classic Cut Sliced Bacon (48 oz.)",
+					"productdescription": "Farmland Hickory Smoked Classic Cut Sliced Bacon (48 oz.)"
+				},
+				"category": {
+					"categoryId": "1549",
+					"seoUrl": "/b/bacon-sausage/1549",
+					"name": "Bacon & Sausage"
+				},
+				"assets": {
+					"template": "/shop/product/templates/samsShop_productType_typical.jsp"
+				},
+				"searchAndSeo": {
+					"keywords": "meat pork fry fried breakfast breakfast-meat sandwich BLT sandwiches",
+					"name": "farmland-hickory-smoked-bacon-3-1-lb-pks",
+					"url": "/p/farmland-hickory-smoked-bacon-3-1-lb-pks/156235"
+				},
+				"shippingOption": {
+					"info": "<br> Standard - 4 to 10 business days <br> Ship Info <br>"
+				},
+				"manufacturingInfo": {
+					"model": "++123560",
+					"brand": "Farmland",
+					"salesRank": 8232
+				},
+				"reviewsAndRatings": {
+					"numReviews": 356,
+					"avgRating": 4.5815,
+					"avgRecommended": 0.14,
+					"isEligibleForAskAndAnswer": true
+				},
+				"skus": [
+					{
+						"skuId": "211769",
+						"productId": "156235",
+						"descriptors": {
+							"name": "Farmland Hickory Smoked Classic Cut Sliced Bacon (48 oz.)",
+							"longDescription": "Good food from the Heartland™ <br>Since 1959, Farmland has maintained the proud heritage of working side by side with American Farm Families to make great-tasting food. This relationship drives us to fulfill the high standards we live by. It's how we do b"
+						},
+						"assets": {
+							"image": "0007024712356_A"
+						},
+						"shippingOption": {
+							"info": "<br> Standard - 4 to 10 business days <br> Ship Info <br>",
+							"costType": "Included",
+							"flag": "included",
+							"isAirShippable": true
+						},
+						"type": "NORMAL_SKU",
+						"fulfillmentChannels": [
+							"CLUB_PICKUP",
+							"D2H"
+						],
+						"merchandiseCategory": 42,
+						"merchandiseSubCategory": 30,
+						"manufacturingInfo": {
+							"model": "++123560"
+						},
+						"shippingMethods": [
+							"STANDARD"
+						],
+						"skuProperties": [
+							"AIR_SHIPPABLE"
+						],
+						"status": "ACTIVE",
+						"itemPolicies": []
+					}
+				],
+				"expiresAt": "2024-04-21T03:17:48.075Z",
+				"cached": true,
+				"id": "156235",
+				"prodProperties": [
+					"ELIGIBLE_FOR_ASKANDANSWER",
+					"MERCHANT_AUTHORIZED"
+				],
+				"legacyProductType": "PERISHABLEFOOD",
+				"parentCategories": [
+					"1549",
+					"3750105"
+				],
+				"status": "ACTIVE",
+				"itemPolicies": [],
+				"hasPromotion": false,
+				"isOOS": true,
+				"freeWarranty": false,
+				"transformed": true,
+				"originalIndex": 11
+			},
+			{
+				"productId": "prod15630514",
+				"productType": "NORMALITEM",
+				"descriptors": {
+					"name": "Godshall's Uncured Turkey Bacon (40 oz.)",
+					"productdescription": "Godshall's Uncured Turkey Bacon (40 oz.)"
+				},
+				"category": {
+					"categoryId": "1549",
+					"seoUrl": "/b/bacon-sausage/1549",
+					"name": "Bacon & Sausage"
+				},
+				"assets": {
+					"template": "/shop/product/templates/samsShop_productType_typical.jsp"
+				},
+				"searchAndSeo": {
+					"keywords": "uncured turkey bacon,bacon,turkey bacon,godshalls bacon,godshalls turkey bacon,",
+					"name": "turkey-bacon-order-number",
+					"url": "/p/turkey-bacon-order-number/prod15630514"
+				},
+				"manufacturingInfo": {
+					"brand": "Godshall's"
+				},
+				"reviewsAndRatings": {
+					"numReviews": 1792,
+					"avgRating": 4.6803,
+					"avgRecommended": 0.21,
+					"isEligibleForAskAndAnswer": true
+				},
+				"skus": [
+					{
+						"skuId": "sku16144539",
+						"productId": "prod15630514",
+						"descriptors": {
+							"name": "Godshall's Uncured Turkey Bacon (40 oz.)"
+						},
+						"assets": {
+							"image": "0079124150426_A"
+						},
+						"shippingOption": {
+							"costType": "Included",
+							"flag": "included",
+							"isAirShippable": true
+						},
+						"type": "NORMAL_SKU",
+						"fulfillmentChannels": [
+							"CLUB_PICKUP",
+							"D2H"
+						],
+						"merchandiseCategory": 57,
+						"merchandiseSubCategory": 38,
+						"skuProperties": [
+							"AIR_SHIPPABLE"
+						],
+						"status": "ACTIVE",
+						"itemPolicies": []
+					}
+				],
+				"expiresAt": "2024-04-21T03:17:48.075Z",
+				"cached": true,
+				"id": "prod15630514",
+				"prodProperties": [
+					"MERCHANT_AUTHORIZED",
+					"ELIGIBLE_FOR_ASKANDANSWER"
+				],
+				"legacyProductType": "NORMALITEM",
+				"parentCategories": [
+					"2267",
+					"1549",
+					"2890103",
+					"13030124"
+				],
+				"status": "ACTIVE",
+				"itemPolicies": [],
+				"hasPromotion": false,
+				"isOOS": true,
+				"freeWarranty": false,
+				"transformed": true,
+				"originalIndex": 12
+			},
+			{
+				"productId": "prod15860464",
+				"productType": "NORMALITEM",
+				"descriptors": {
+					"name": "Wright® Brand Thick Sliced Applewood Smoked Bacon (4 lb.)",
+					"whyWeLoveIt": "<p>Thicker cut bacon means more to love. Now you can taste a stronger&nbsp;slow-smoked applewood flavor with each bite. Who knows;&nbsp;one pack might not be enough!</p>",
+					"productdescription": "Wright® Brand Thick Sliced Applewood Smoked Bacon (4 lb.)"
+				},
+				"category": {
+					"categoryId": "1549",
+					"seoUrl": "/b/bacon-sausage/1549",
+					"name": "Bacon & Sausage"
+				},
+				"assets": {
+					"template": "/shop/product/templates/samsShop_productType_typical.jsp"
+				},
+				"searchAndSeo": {
+					"keywords": "Wright Brand,wright brand,wright bacon,bacon,smoked bacon,hickory smoked bacon,thicker cut bacon,applewood bacon,Applewood bacon,applewood,",
+					"name": "wright-applewood-smoked-thick-cut-bacon-4lbs",
+					"url": "/p/wright-applewood-smoked-thick-cut-bacon-4lbs/prod15860464"
+				},
+				"shippingOption": {
+					"info": "<br> Standard - 4 to 10 business days <br> Ship Info <br>"
+				},
+				"manufacturingInfo": {
+					"model": "10262070616",
+					"brand": "Wright Brand"
+				},
+				"reviewsAndRatings": {
+					"numReviews": 4667,
+					"avgRating": 4.7568,
+					"avgRecommended": 0.16,
+					"isEligibleForAskAndAnswer": true
+				},
+				"promotions": [
+					{
+						"promotionText": "<p></p>\n",
+						"channel": "WEB"
+					},
+					{
+						"promotionText": "<p></p>\n",
+						"channel": "APP"
+					}
+				],
+				"skus": [
+					{
+						"skuId": "sku16374466",
+						"productId": "prod15860464",
+						"descriptors": {
+							"name": "Wright Brand Applewood Smoked Thick Cut Bacon (4 lbs.)"
+						},
+						"assets": {
+							"image": "0007962100349_A"
+						},
+						"shippingOption": {
+							"info": "<br> Standard - 4 to 10 business days <br> Ship Info <br>",
+							"costType": "Included",
+							"flag": "included",
+							"isAirShippable": true
+						},
+						"type": "NORMAL_SKU",
+						"fulfillmentChannels": [
+							"IN_CLUB_ONLY"
+						],
+						"merchandiseCategory": 42,
+						"merchandiseSubCategory": 30,
+						"manufacturingInfo": {
+							"model": "10262070616"
+						},
+						"shippingMethods": [
+							"STANDARD"
+						],
+						"skuProperties": [
+							"AIR_SHIPPABLE"
+						],
+						"status": "ACTIVE",
+						"itemPolicies": []
+					}
+				],
+				"expiresAt": "2024-04-21T03:17:48.075Z",
+				"cached": true,
+				"id": "prod15860464",
+				"prodProperties": [
+					"ELIGIBLE_FOR_ASKANDANSWER",
+					"MERCHANT_AUTHORIZED",
+					"OFFLINE_WHEN_OOS"
+				],
+				"legacyProductType": "NORMALITEM",
+				"parentCategories": [
+					"3350101",
+					"16890386",
+					"2267",
+					"1549",
+					"2173"
+				],
+				"status": "ACTIVE",
+				"itemPolicies": [],
+				"hasPromotion": false,
+				"isOOS": true,
+				"freeWarranty": false,
+				"transformed": true,
+				"originalIndex": 13
+			},
+			{
+				"productId": "P03019950",
+				"productType": "NORMALITEM",
+				"descriptors": {
+					"name": "Wright Brand Thick Cut Bacon, Hickory Smoked 4 lbs.",
+					"productdescription": "Wright Brand Thick Cut Bacon, Hickory Smoked 4 lbs."
+				},
+				"category": {
+					"categoryId": "1549",
+					"seoUrl": "/b/bacon-sausage/1549",
+					"name": "Bacon & Sausage"
+				},
+				"assets": {
+					"template": "/shop/product/templates/samsShop_productType_typical.jsp"
+				},
+				"searchAndSeo": {
+					"name": "wright-brand-thick-cut-bacon-hickory-smoked-4-lbs",
+					"url": "/p/wright-brand-thick-cut-bacon-hickory-smoked-4-lbs/P03019950"
+				},
+				"manufacturingInfo": {
+					"model": "10262060616",
+					"brand": "Wright Brand"
+				},
+				"reviewsAndRatings": {
+					"numReviews": 91,
+					"avgRating": 4.8022,
+					"avgRecommended": 0.18,
+					"isEligibleForAskAndAnswer": true
+				},
+				"skus": [
+					{
+						"skuId": "IG03054267",
+						"productId": "P03019950",
+						"descriptors": {
+							"name": "Wright Brand Thick Cut Bacon, Hickory Smoked (4 lbs.)",
+							"longDescription": "Wright® Brand Thick Cut Bacon, Hickory Smoked (4 lbs.) is the highest quality bacon around. It is hand-selected and hand-trimmed for some of the thickest cuts available. Now you can pick up this breakfast favorite when you visit your local Sam's Club store. Why Choose Wright Brand Thick Cut Bacon, Hickory Smoked? Since 1922, Wright Brand has made high-quality thick bacon to perfection. This hickory smoked bacon is naturally smoked and cured with water, salt, sugar, sodium phosphate, sodium erythorbate and sodium nitrite. It is the bigger, better choice for those who enjoy thick-sliced bacon. You can count on Wright Brand Thick Cut Bacon to be a tasty addition to your breakfast table. And the large four-poound package ensures that there will always be enough delicious thick-sliced bacon to go around no matter how many people are sitting around the table. What Brand Distributes Wright Brand Thick Cut Bacon, Hickory Smoked? This delicious Wright Brand Hickory Bacon is distributed by Tyson® Refrigerated Processed Meats, Inc. Wright Bacon has been inspected for quality by the USDA. Purchase Wright Thick Cut Bacon at Your Local Sam's Club Store Pick up a package or two of this thick cut bacon from your local Sam's Club store for breakfast or to add to your dinner recipe. This bacon has a heartier and more robust flavor that your family is sure to enjoy. It is perfect to serve up for breakfast or chopped up in pasta, fried rice on sandwiches or other savory dishes. You can pick up this convenient four-pound pack at Sam's Club today along with other delicious breakfast essentials. Sam's Club has several varieties of Wright Brand Bacon including Applewood Smoked and Pecan Wood Smoked.<br>"
+						},
+						"assets": {
+							"image": "0007962100478_A"
+						},
+						"shippingOption": {
+							"costType": "Calculated",
+							"flag": "freeEligible",
+							"isAirShippable": true
+						},
+						"type": "NORMAL_SKU",
+						"fulfillmentChannels": [
+							"CLUB_PICKUP",
+							"D2H"
+						],
+						"merchandiseCategory": 42,
+						"merchandiseSubCategory": 30,
+						"skuProperties": [
+							"AVAILABLE_SEPARATELY",
+							"AIR_SHIPPABLE"
+						],
+						"status": "ACTIVE",
+						"itemPolicies": []
+					}
+				],
+				"expiresAt": "2024-04-21T03:17:48.075Z",
+				"cached": true,
+				"id": "P03019950",
+				"prodProperties": [
+					"MERCHANT_AUTHORIZED",
+					"ELIGIBLE_FOR_ASKANDANSWER"
+				],
+				"legacyProductType": "NORMALITEM",
+				"parentCategories": [
+					"1549"
+				],
+				"createdOn": "2023-06-07T16:10:50.000Z",
+				"status": "ACTIVE",
+				"itemPolicies": [],
+				"hasPromotion": false,
+				"isOOS": true,
+				"freeWarranty": false,
+				"transformed": true,
+				"originalIndex": 14
+			},
+			{
+				"productId": "P03015636",
+				"productType": "NORMALITEM",
+				"descriptors": {
+					"name": "Hempler's European Brand Center Cut Bacon (40 oz.)",
+					"productdescription": "Hempler's European Brand Center Cut Bacon (40 oz.)"
+				},
+				"category": {
+					"categoryId": "1549",
+					"seoUrl": "/b/bacon-sausage/1549",
+					"name": "Bacon & Sausage"
+				},
+				"assets": {
+					"template": "/shop/product/templates/samsShop_productType_typical.jsp"
+				},
+				"searchAndSeo": {
+					"name": "hemplers-european-brand-center-cut-bacon-40-oz",
+					"url": "/p/hemplers-european-brand-center-cut-bacon-40-oz/P03015636"
+				},
+				"manufacturingInfo": {
+					"brand": "Hempler Food Group LLC"
+				},
+				"reviewsAndRatings": {
+					"numReviews": 478,
+					"avgRating": 4.3201,
+					"avgRecommended": 0.17,
+					"isEligibleForAskAndAnswer": true
+				},
+				"skus": [
+					{
+						"skuId": "IG03031749",
+						"productId": "P03015636",
+						"descriptors": {
+							"name": "Hempler's European Brand Center Cut Bacon (40 oz.)"
+						},
+						"assets": {
+							"image": "0002183459183_A"
+						},
+						"shippingOption": {
+							"costType": "Calculated",
+							"flag": "freeEligible",
+							"isAirShippable": true
+						},
+						"type": "NORMAL_SKU",
+						"fulfillmentChannels": [
+							"CLUB_PICKUP",
+							"D2H"
+						],
+						"merchandiseCategory": 57,
+						"merchandiseSubCategory": 39,
+						"skuProperties": [
+							"AVAILABLE_SEPARATELY",
+							"AIR_SHIPPABLE"
+						],
+						"status": "ACTIVE",
+						"itemPolicies": []
+					}
+				],
+				"expiresAt": "2024-04-21T03:17:48.075Z",
+				"cached": true,
+				"id": "P03015636",
+				"prodProperties": [
+					"MERCHANT_AUTHORIZED",
+					"ELIGIBLE_FOR_ASKANDANSWER"
+				],
+				"legacyProductType": "NORMALITEM",
+				"parentCategories": [
+					"1549"
+				],
+				"createdOn": "2023-01-27T15:25:26.000Z",
+				"status": "ACTIVE",
+				"itemPolicies": [],
+				"hasPromotion": false,
+				"isOOS": true,
+				"freeWarranty": false,
+				"transformed": true,
+				"originalIndex": 15
+			},
+			{
+				"productId": "156265",
+				"productType": "PERISHABLEFOOD",
+				"descriptors": {
+					"name": "Oscar Mayer Original Turkey Bacon (12 oz., 3 pk.)",
+					"whyWeLoveIt": "Quality you can taste. Make perfect bacon every time with Oscar Mayer Turkey Bacon&mdash;less sodium, less fat; same satisfaction. Only Oscar Mayer Bacon is bacon me smile.",
+					"productdescription": "Oscar Mayer Original Turkey Bacon (12 oz., 3 pk.)"
+				},
+				"category": {
+					"categoryId": "1549",
+					"seoUrl": "/b/bacon-sausage/1549",
+					"name": "Bacon & Sausage"
+				},
+				"assets": {
+					"template": "/shop/product/templates/samsShop_productType_typical.jsp"
+				},
+				"searchAndSeo": {
+					"keywords": "kraft,foods,kraft,oscar,mayber,oscar,mayer,oscar,mayer,turkey,bacon,turkey,bacon,low,fat,turkey,bacon,low,fat,turkey,bacon,perishable",
+					"name": "oscar-mayer-turkey-bacon-36-oz",
+					"url": "/p/oscar-mayer-turkey-bacon-36-oz/156265"
+				},
+				"shippingOption": {
+					"info": "<br> Standard - 4 to 10 business days <br> Ship Info <br>"
+				},
+				"manufacturingInfo": {
+					"model": "71871",
+					"brand": "Oscar Mayer"
+				},
+				"reviewsAndRatings": {
+					"numReviews": 2052,
+					"avgRating": 4.5692,
+					"avgRecommended": 0.18,
+					"isEligibleForAskAndAnswer": true
+				},
+				"skus": [
+					{
+						"skuId": "211775",
+						"productId": "156265",
+						"descriptors": {
+							"name": "Oscar Mayer Original Turkey Bacon (12 oz., 3 pk.)"
+						},
+						"assets": {
+							"image": "0007187154874_A"
+						},
+						"shippingOption": {
+							"info": "<br> Standard - 4 to 10 business days <br> Ship Info <br>",
+							"costType": "Included",
+							"flag": "included",
+							"isAirShippable": true
+						},
+						"type": "NORMAL_SKU",
+						"fulfillmentChannels": [
+							"CLUB_PICKUP",
+							"D2H"
+						],
+						"merchandiseCategory": 42,
+						"merchandiseSubCategory": 27,
+						"streetDate": "2000-01-01T06:00:00Z",
+						"manufacturingInfo": {
+							"model": "71871"
+						},
+						"shippingMethods": [
+							"STANDARD"
+						],
+						"skuProperties": [
+							"AIR_SHIPPABLE",
+							"AVAILABLE_SEPARATELY"
+						],
+						"status": "ACTIVE",
+						"itemPolicies": []
+					}
+				],
+				"expiresAt": "2024-04-21T03:17:48.075Z",
+				"cached": true,
+				"id": "156265",
+				"prodProperties": [
+					"ELIGIBLE_FOR_ASKANDANSWER",
+					"MERCHANT_AUTHORIZED"
+				],
+				"legacyProductType": "PERISHABLEFOOD",
+				"parentCategories": [
+					"1180127",
+					"13060101",
+					"7680109",
+					"15990215",
+					"1549",
+					"8038",
+					"2890103",
+					"3750105",
+					"4690101",
+					"13030124"
+				],
+				"status": "ACTIVE",
+				"itemPolicies": [],
+				"hasPromotion": false,
+				"isOOS": true,
+				"freeWarranty": false,
+				"transformed": true,
+				"originalIndex": 16
+			},
+			{
+				"productId": "prod24240023",
+				"productType": "PERISHABLEFOOD",
+				"descriptors": {
+					"name": "Kunzler Original Sliced Bacon (3 lbs.)",
+					"productdescription": "Kunzler Original Sliced Bacon (3 lbs.)"
+				},
+				"category": {
+					"categoryId": "1549",
+					"seoUrl": "/b/bacon-sausage/1549",
+					"name": "Bacon & Sausage"
+				},
+				"assets": {
+					"template": "/shop/product/templates/samsShop_productType_typical.jsp"
+				},
+				"searchAndSeo": {
+					"name": "kunzler-original-sliced-bacon-3-lb",
+					"url": "/p/kunzler-original-sliced-bacon-3-lb/prod24240023"
+				},
+				"manufacturingInfo": {
+					"model": "2671",
+					"brand": "Kunzler"
+				},
+				"reviewsAndRatings": {
+					"numReviews": 57,
+					"avgRating": 4.5965,
+					"avgRecommended": 0.12,
+					"isEligibleForAskAndAnswer": true
+				},
+				"skus": [
+					{
+						"skuId": "sku24794022",
+						"productId": "prod24240023",
+						"descriptors": {
+							"name": "Kunzler Original Sliced Bacon (3 lbs.)"
+						},
+						"assets": {
+							"image": "0007175502671_A"
+						},
+						"shippingOption": {
+							"costType": "Included",
+							"flag": "included",
+							"isAirShippable": true
+						},
+						"type": "NORMAL_SKU",
+						"fulfillmentChannels": [
+							"IN_CLUB_ONLY"
+						],
+						"merchandiseCategory": 42,
+						"merchandiseSubCategory": 30,
+						"manufacturingInfo": {
+							"model": "2671"
+						},
+						"skuProperties": [
+							"AIR_SHIPPABLE",
+							"AVAILABLE_SEPARATELY"
+						],
+						"status": "ACTIVE",
+						"itemPolicies": []
+					}
+				],
+				"expiresAt": "2024-04-21T03:17:48.075Z",
+				"cached": true,
+				"id": "prod24240023",
+				"prodProperties": [
+					"ELIGIBLE_FOR_ASKANDANSWER",
+					"MERCHANT_AUTHORIZED",
+					"OFFLINE_WHEN_OOS"
+				],
+				"legacyProductType": "PERISHABLEFOOD",
+				"parentCategories": [
+					"1549"
+				],
+				"status": "ACTIVE",
+				"itemPolicies": [],
+				"hasPromotion": false,
+				"isOOS": true,
+				"freeWarranty": false,
+				"transformed": true,
+				"originalIndex": 17
+			},
+			{
+				"productId": "P03019947",
+				"productType": "NORMALITEM",
+				"descriptors": {
+					"name": "Wright Brand Applewood Smoked Thick Cut Bacon (4 lbs.)",
+					"productdescription": "Wright Brand Applewood Smoked Thick Cut Bacon (4 lbs.)"
+				},
+				"category": {
+					"categoryId": "1549",
+					"seoUrl": "/b/bacon-sausage/1549",
+					"name": "Bacon & Sausage"
+				},
+				"assets": {
+					"template": "/shop/product/templates/samsShop_productType_typical.jsp"
+				},
+				"searchAndSeo": {
+					"name": "wright-brand-applewood-smoked-thick-cut-bacon-4-lbs",
+					"url": "/p/wright-brand-applewood-smoked-thick-cut-bacon-4-lbs/P03019947"
+				},
+				"manufacturingInfo": {
+					"model": "10262070616",
+					"brand": "Wright Brand"
+				},
+				"reviewsAndRatings": {
+					"numReviews": 83,
+					"avgRating": 4.5422,
+					"avgRecommended": 0.12,
+					"isEligibleForAskAndAnswer": true
+				},
+				"skus": [
+					{
+						"skuId": "IG03054268",
+						"productId": "P03019947",
+						"descriptors": {
+							"name": "Wright Brand Applewood Smoked Thick Cut Bacon (4 lbs.)",
+							"longDescription": "Use Wright® Brand Applewood Smoked Thick Cut Bacon (4 lbs.) to relieve hunger and curb your cravings. This bacon contains a thicker cut, making it juicier than alternatives. What is Wright Brand Applewood Smoked Thick Cut Bacon? This pack consists of Applewood bacon that is hand-selected and hand-trimmed to near perfection. This bacon is filled with flavor and has been slowly smoked with natural hardwoods, so you may find it irresistible. Who Makes Wright Brand Applewood Smoked Thick Cut Bacon? This Applewood bacon comes from Tyson Foods, Inc., which is an American multinational food company. As of today, Tyson Foods is one of the largest processors of chicken, beef and pork in the entire country. The company is also committed to creating the best food. What Can I Do With This Smoked Bacon? While you eat them after they're cooked, you can also use this Applewood bacon to create delicious cuisines. For example, placing strips of bacon in your sandwiches, burgers, lasagna and salad can heighten their flavor immensely. And if you crumble your smoked bacon into tiny bits, they become a tasty topping for pizza, French fries, spaghetti and more. With thick, high-quality bacon like this, you can get creative. Great Meal for Busy Parents When you're short on time but want to prepare a warm, yummy meal, this smoked bacon comes in handy. All you have to do is place the strips on a hot stove and flip them over. Within minutes, you'll have big pieces of crispy bacon just waiting for you. Large Quantity Makes Sharing Easy Since this particular option contains four pounds of smoked bacon, you can cook enough for the entire family. Whether you're hosting a barbecue or simply want to prepare a hearty dinner, this should be more than sufficient. Easy To Store This Applewood bacon comes in a resealable package, which is easy to stack into a freezer. Since it's resealable, getting your desired amount of bacon is nearly effortless and produces little mess.<br>"
+						},
+						"assets": {
+							"image": "0007962100479_A"
+						},
+						"shippingOption": {
+							"costType": "Calculated",
+							"flag": "freeEligible",
+							"isAirShippable": true
+						},
+						"type": "NORMAL_SKU",
+						"fulfillmentChannels": [
+							"CLUB_PICKUP",
+							"D2H"
+						],
+						"merchandiseCategory": 42,
+						"merchandiseSubCategory": 30,
+						"skuProperties": [
+							"AVAILABLE_SEPARATELY",
+							"AIR_SHIPPABLE"
+						],
+						"status": "ACTIVE",
+						"itemPolicies": []
+					}
+				],
+				"expiresAt": "2024-04-21T03:17:48.075Z",
+				"cached": true,
+				"id": "P03019947",
+				"prodProperties": [
+					"MERCHANT_AUTHORIZED",
+					"ELIGIBLE_FOR_ASKANDANSWER"
+				],
+				"legacyProductType": "NORMALITEM",
+				"parentCategories": [
+					"1549"
+				],
+				"createdOn": "2023-06-07T16:14:31.000Z",
+				"status": "ACTIVE",
+				"itemPolicies": [],
+				"hasPromotion": false,
+				"isOOS": true,
+				"freeWarranty": false,
+				"transformed": true,
+				"originalIndex": 18
+			},
+			{
+				"productId": "prod22740298",
+				"productType": "NORMALITEM",
+				"descriptors": {
+					"name": "Falls Brand Thick Cut Bacon, Hardwood Smoked (4 lbs.)",
+					"productdescription": "Falls Brand Thick Cut Bacon, Hardwood Smoked (4 lbs.)"
+				},
+				"category": {
+					"categoryId": "1549",
+					"seoUrl": "/b/bacon-sausage/1549",
+					"name": "Bacon & Sausage"
+				},
+				"assets": {
+					"template": "/shop/product/templates/samsShop_productType_typical.jsp"
+				},
+				"searchAndSeo": {
+					"keywords": "Thick,Smoked,Cured,Old-fashioned,Sliced,Smoky,Sweet,bacon,thick cut bacon,thick sliced bacon,hickory smoked bacon,smoked bacon",
+					"name": "falls-brand-thick-cut-bacon-hardwood-smoked-4lbs",
+					"url": "/p/falls-brand-thick-cut-bacon-hardwood-smoked-4lbs/prod22740298"
+				},
+				"manufacturingInfo": {
+					"model": "17",
+					"brand": "Falls Brand"
+				},
+				"reviewsAndRatings": {
+					"numReviews": 33,
+					"avgRating": 4.7576,
+					"avgRecommended": 0.18,
+					"isEligibleForAskAndAnswer": true
+				},
+				"skus": [
+					{
+						"skuId": "sku21055866",
+						"productId": "prod22740298",
+						"descriptors": {
+							"name": "Falls Brand Thick Cut Bacon, Hardwood Smoked (4 lbs.)"
+						},
+						"assets": {
+							"image": "0040644015589_A"
+						},
+						"shippingOption": {
+							"costType": "Included",
+							"flag": "included"
+						},
+						"type": "NORMAL_SKU",
+						"fulfillmentChannels": [
+							"IN_CLUB_ONLY"
+						],
+						"merchandiseCategory": 42,
+						"merchandiseSubCategory": 30,
+						"manufacturingInfo": {
+							"model": "54138"
+						},
+						"status": "ACTIVE",
+						"itemPolicies": []
+					}
+				],
+				"expiresAt": "2024-04-21T03:17:48.075Z",
+				"cached": true,
+				"id": "prod22740298",
+				"prodProperties": [
+					"OFFLINE_WHEN_OOS",
+					"MERCHANT_AUTHORIZED",
+					"ELIGIBLE_FOR_ASKANDANSWER"
+				],
+				"legacyProductType": "NORMALITEM",
+				"parentCategories": [
+					"1549"
+				],
+				"status": "ACTIVE",
+				"itemPolicies": [],
+				"hasPromotion": false,
+				"isOOS": true,
+				"freeWarranty": false,
+				"transformed": true,
+				"originalIndex": 19
+			},
+			{
+				"productId": "prod2380282",
+				"productType": "NORMALITEM",
+				"descriptors": {
+					"name": "DAK Premium Sliced Bacon, 1 lb., 3 pk.",
+					"productdescription": "DAK Premium Sliced Bacon, 1 lb., 3 pk."
+				},
+				"category": {
+					"categoryId": "1549",
+					"seoUrl": "/b/bacon-sausage/1549",
+					"name": "Bacon & Sausage"
+				},
+				"assets": {
+					"template": "/shop/product/templates/samsShop_productType_typical.jsp"
+				},
+				"searchAndSeo": {
+					"keywords": "DAK Premium Sliced Bacon,DAK,Premium Sliced Bacon,DAK bacon,sliced bacon,dak,bacon,premium bacon,hardwood bacon,sliced hardwood bacon,breakfast,lunch,dinner,BLT,sandwich,cooking,baking",
+					"name": "dak-premium-sliced-bacon-1-lb-3-pk",
+					"url": "/p/dak-premium-sliced-bacon-1-lb-3-pk/prod2380282"
+				},
+				"manufacturingInfo": {
+					"brand": "DAK"
+				},
+				"reviewsAndRatings": {
+					"numReviews": 155,
+					"avgRating": 4.8194,
+					"avgRecommended": 0.05,
+					"isEligibleForAskAndAnswer": true
+				},
+				"skus": [
+					{
+						"skuId": "sku2764256",
+						"productId": "prod2380282",
+						"descriptors": {
+							"name": "DAK Premium Sliced Bacon, 1 lb., 3 pk."
+						},
+						"assets": {
+							"image": "0007089208529_A"
+						},
+						"shippingOption": {
+							"costType": "Included",
+							"flag": "included"
+						},
+						"type": "NORMAL_SKU",
+						"fulfillmentChannels": [
+							"CLUB_PICKUP",
+							"D2H"
+						],
+						"merchandiseCategory": 42,
+						"merchandiseSubCategory": 30,
+						"skuProperties": [
+							"AVAILABLE_SEPARATELY"
+						],
+						"status": "ACTIVE",
+						"itemPolicies": []
+					}
+				],
+				"expiresAt": "2024-04-21T03:17:48.075Z",
+				"cached": true,
+				"id": "prod2380282",
+				"prodProperties": [
+					"MERCHANT_AUTHORIZED",
+					"ELIGIBLE_FOR_ASKANDANSWER"
+				],
+				"legacyProductType": "NORMALITEM",
+				"parentCategories": [
+					"1549"
+				],
+				"status": "ACTIVE",
+				"itemPolicies": [],
+				"hasPromotion": false,
+				"isOOS": true,
+				"freeWarranty": false,
+				"transformed": true,
+				"originalIndex": 20
+			},
+			{
+				"productId": "P990328188",
+				"productType": "NORMALITEM",
+				"descriptors": {
+					"name": "Jennie-O Turkey Bacon, 12 oz., 3 pk.",
+					"productdescription": "Jennie-O Turkey Bacon, 12 oz., 3 pk."
+				},
+				"category": {
+					"categoryId": "1549",
+					"seoUrl": "/b/bacon-sausage/1549",
+					"name": "Bacon & Sausage"
+				},
+				"assets": {
+					"template": "/shop/product/templates/samsShop_productType_typical.jsp"
+				},
+				"searchAndSeo": {
+					"name": "jennie-o-turkey-bacon-12-oz-3-pk",
+					"url": "/p/jennie-o-turkey-bacon-12-oz-3-pk/P990328188"
+				},
+				"manufacturingInfo": {
+					"brand": "Jennie-O"
+				},
+				"reviewsAndRatings": {
+					"isEligibleForAskAndAnswer": true
+				},
+				"skus": [
+					{
+						"skuId": "IG03080914",
+						"productId": "P990328188",
+						"descriptors": {
+							"name": "Jennie-O Turkey Bacon, 12 oz., 3 pk."
+						},
+						"assets": {
+							"image": "0004222235384_A"
+						},
+						"shippingOption": {
+							"costType": "Calculated",
+							"flag": "paid",
+							"isAirShippable": true
+						},
+						"type": "NORMAL_SKU",
+						"fulfillmentChannels": [
+							"CLUB_PICKUP",
+							"D2H"
+						],
+						"merchandiseCategory": 42,
+						"merchandiseSubCategory": 27,
+						"skuProperties": [
+							"AVAILABLE_SEPARATELY",
+							"AIR_SHIPPABLE"
+						],
+						"status": "ACTIVE",
+						"itemPolicies": []
+					}
+				],
+				"expiresAt": "2024-04-21T03:17:48.075Z",
+				"cached": true,
+				"id": "P990328188",
+				"prodProperties": [
+					"MERCHANT_AUTHORIZED",
+					"ELIGIBLE_FOR_ASKANDANSWER"
+				],
+				"legacyProductType": "NORMALITEM",
+				"parentCategories": [
+					"1549",
+					"15190203"
+				],
+				"createdOn": "2024-01-31T20:13:33.000Z",
+				"status": "ACTIVE",
+				"itemPolicies": [],
+				"hasPromotion": false,
+				"isOOS": true,
+				"freeWarranty": false,
+				"transformed": true,
+				"originalIndex": 21
+			},
+			{
+				"productId": "PL980428968",
+				"productType": "NORMALITEM",
+				"descriptors": {
+					"name": "Godshall's Uncured Canadian Turkey Bacon",
+					"productdescription": "Godshall's Uncured Canadian Turkey Bacon"
+				},
+				"category": {
+					"categoryId": "1547",
+					"seoUrl": "/b/lunch-meat/1547",
+					"name": "Lunch Meat"
+				},
+				"assets": {
+					"template": "/shop/product/templates/samsShop_productType_typical.jsp"
+				},
+				"searchAndSeo": {
+					"name": "godshalls-uncured-canadian-turkey-bacon",
+					"url": "/p/godshalls-uncured-canadian-turkey-bacon/PL980428968"
+				},
+				"shippingOption": {
+					"info": "Standard"
+				},
+				"manufacturingInfo": {
+					"brand": "Godshall's Quality Meats"
+				},
+				"reviewsAndRatings": {
+					"numReviews": 331,
+					"avgRating": 4.4804,
+					"avgRecommended": 0.16,
+					"isEligibleForAskAndAnswer": true
+				},
+				"skus": [
+					{
+						"skuId": "SL980428968",
+						"productId": "PL980428968",
+						"descriptors": {
+							"name": "Godshall's Uncured Canadian Turkey Bacon"
+						},
+						"assets": {
+							"image": "0079124150171_A"
+						},
+						"shippingOption": {
+							"info": "Standard",
+							"costType": "Calculated",
+							"flag": "freeEligible",
+							"isAirShippable": true
+						},
+						"type": "NORMAL_SKU",
+						"fulfillmentChannels": [
+							"CLUB_PICKUP",
+							"D2H"
+						],
+						"merchandiseCategory": 57,
+						"merchandiseSubCategory": 39,
+						"shippingMethods": [
+							"STANDARD"
+						],
+						"skuProperties": [
+							"AIR_SHIPPABLE"
+						],
+						"status": "ACTIVE",
+						"itemPolicies": []
+					}
+				],
+				"expiresAt": "2024-04-21T03:17:48.075Z",
+				"cached": true,
+				"id": "PL980428968",
+				"prodProperties": [
+					"OFFLINE_WHEN_OOS",
+					"MERCHANT_AUTHORIZED",
+					"ELIGIBLE_FOR_ASKANDANSWER"
+				],
+				"legacyProductType": "NORMALITEM",
+				"parentCategories": [
+					"1549",
+					"1547"
+				],
+				"status": "ACTIVE",
+				"itemPolicies": [],
+				"hasPromotion": false,
+				"isOOS": true,
+				"freeWarranty": false,
+				"transformed": true,
+				"originalIndex": 23
+			},
+			{
+				"productId": "prod25460809",
+				"productType": "NORMALITEM",
+				"descriptors": {
+					"name": "Member's Mark Fully Cooked Uncured Canadian Bacon (24 oz.)",
+					"whyWeLoveIt": "<p>Member's Mark Fully Cooked Uncured Canadian Bacon is a healthier option and can be used in the same recipes as American bacon. Leaner meat means you can have extra helpings!&nbsp;</p>\n",
+					"whyWeLoveItTitle": "Why we love this",
+					"productdescription": "Member's Mark Fully Cooked Uncured Canadian Bacon (24 oz.)"
+				},
+				"category": {
+					"categoryId": "1547",
+					"seoUrl": "/b/lunch-meat/1547",
+					"name": "Lunch Meat"
+				},
+				"assets": {
+					"template": "/shop/product/templates/samsShop_productType_typical.jsp"
+				},
+				"searchAndSeo": {
+					"name": "members-mark-fully-cooked-uncured-canadian-bacon-24oz",
+					"url": "/p/members-mark-fully-cooked-uncured-canadian-bacon-24oz/prod25460809"
+				},
+				"manufacturingInfo": {
+					"brand": "Member's Mark"
+				},
+				"reviewsAndRatings": {
+					"numReviews": 569,
+					"avgRating": 4.5132,
+					"avgRecommended": 0.18,
+					"isEligibleForAskAndAnswer": true
+				},
+				"skus": [
+					{
+						"skuId": "sku26014911",
+						"productId": "prod25460809",
+						"descriptors": {
+							"name": "Member's Mark Fully Cooked Canadian Bacon (24 oz.)"
+						},
+						"assets": {
+							"image": "0019396812239_A"
+						},
+						"shippingOption": {
+							"costType": "Included",
+							"flag": "included",
+							"isAirShippable": true
+						},
+						"type": "NORMAL_SKU",
+						"fulfillmentChannels": [
+							"CLUB_PICKUP",
+							"D2H"
+						],
+						"merchandiseCategory": 57,
+						"merchandiseSubCategory": 37,
+						"skuProperties": [
+							"AVAILABLE_SEPARATELY",
+							"AIR_SHIPPABLE"
+						],
+						"status": "ACTIVE",
+						"itemPolicies": []
+					}
+				],
+				"expiresAt": "2024-04-21T03:17:48.075Z",
+				"cached": true,
+				"id": "prod25460809",
+				"prodProperties": [
+					"MERCHANT_AUTHORIZED",
+					"ELIGIBLE_FOR_ASKANDANSWER"
+				],
+				"legacyProductType": "NORMALITEM",
+				"parentCategories": [
+					"1547",
+					"16860220",
+					"13360111",
+					"17080222",
+					"11400111"
+				],
+				"status": "ACTIVE",
+				"itemPolicies": [],
+				"hasPromotion": false,
+				"isOOS": true,
+				"freeWarranty": false,
+				"transformed": true,
+				"originalIndex": 24
+			}
+		],
+		"numberOfRecords": 25,
+		"numberOfRecordsRequested": 45,
+		"offset": 0,
+		"searchKeyword": "bacon",
+		"selectedSortProperty": {
+			"name": "Relevance",
+			"id": "relevance",
+			"order": "Ascending",
+			"isActive": true
+		},
+		"feLog": "",
+		"selectedRefinements": [],
+		"selectedCategories": {
+			"multiSelect": false,
+			"collapsed": false,
+			"showMore": false
+		},
+		"additionalResults": [],
+		"hasPromotion": false,
+		"analyticsTags": {
+			"excludedHealthAdsInfo": {
+				"excluded_ingrid_ads": [],
+				"excluded_sba_ads": [],
+				"excluded_video_ads": []
+			},
+			"rerank_info": {
+				"bloomreach_ranks": [
+					"prod22910875",
+					"prod23201244",
+					"prod16270010",
+					"prod21428808",
+					"prod16610108",
+					"P990322047",
+					"P03030172",
+					"P03013865",
+					"prod21160249",
+					"prod26460170",
+					"P990324925",
+					"156235",
+					"prod20353151",
+					"prod15630514",
+					"prod15860464",
+					"P03019950",
+					"P03015636",
+					"156265",
+					"prod24240023",
+					"P03019947",
+					"PL980428968",
+					"prod25460809",
+					"prod22740298",
+					"prod2380282",
+					"P990328188"
+				],
+				"model_ranks": [
+					"prod22910875",
+					"prod23201244",
+					"prod16270010",
+					"prod21428808",
+					"prod16610108",
+					"P990322047",
+					"P03030172",
+					"P03013865",
+					"prod26460170",
+					"P990324925",
+					"156235",
+					"prod20353151",
+					"prod15630514",
+					"prod15860464",
+					"P03019950",
+					"P03015636",
+					"156265",
+					"prod24240023",
+					"P03019947",
+					"prod22740298",
+					"prod2380282",
+					"P990328188",
+					"prod21160249",
+					"PL980428968",
+					"prod25460809"
+				],
+				"search_type": "precision_search_type"
+			},
+			"ingrid_ads_info": {
+				"bloomreach_ranks": [
+					"prod22910875",
+					"prod23201244",
+					"prod16270010",
+					"prod21428808",
+					"prod16610108",
+					"P990322047",
+					"P03030172",
+					"P03013865",
+					"prod26460170",
+					"P990324925",
+					"156235",
+					"prod20353151",
+					"prod15630514",
+					"prod15860464",
+					"P03019950",
+					"P03015636",
+					"156265",
+					"prod24240023",
+					"P03019947",
+					"prod22740298",
+					"prod2380282",
+					"P990328188",
+					"prod21160249",
+					"PL980428968",
+					"prod25460809"
+				],
+				"model_ranks": [
+					"prod20353151",
+					"prod22910875",
+					"prod23201244",
+					"prod16270010",
+					"prod21428808",
+					"prod16610108",
+					"P990322047",
+					"P03030172",
+					"P03013865",
+					"prod26460170",
+					"P990324925",
+					"156235",
+					"prod15630514",
+					"prod15860464",
+					"P03019950",
+					"P03015636",
+					"156265",
+					"prod24240023",
+					"P03019947",
+					"prod22740298",
+					"prod2380282",
+					"P990328188",
+					"prod21160249",
+					"PL980428968",
+					"prod25460809"
+				],
+				"ad_items": [
+					{
+						"itemId": "prod20353151",
+						"cpc": 0.51
+					}
+				]
+			},
+			"dynamicFacetsFeaturesInfo": {
+				"dynamic_facets_count": 4,
+				"dynamic_features_count": 5
+			},
+			"taxonomyCategoryInfo": {
+				"all_categories_count": 42,
+				"primary_categories_count": 3
+			}
+		},
+		"relevanceCategories": [
+			{
+				"categoryId": "1549",
+				"categoryName": "Bacon & Sausage"
+			}
+		],
+		"merchModules": [
+			{
+				"sequence": 1,
+				"image": "Hormel",
+				"imageUrl": "",
+				"partUrl": "/s/bacon?rootDimension=Brand:Hormel",
+				"messagePart": "Hormel"
+			},
+			{
+				"sequence": 2,
+				"image": "Wright Brand",
+				"imageUrl": "",
+				"partUrl": "/s/bacon?rootDimension=Brand:Wright Brand",
+				"messagePart": "Wright Brand"
+			},
+			{
+				"sequence": 3,
+				"image": "Smithfield",
+				"imageUrl": "",
+				"partUrl": "/s/bacon?rootDimension=Brand:Smithfield",
+				"messagePart": "Smithfield"
+			},
+			{
+				"sequence": 4,
+				"image": "Salad Toppings",
+				"imageUrl": "",
+				"partUrl": "/s/bacon?rootDimension=Product Type:Salad Toppings",
+				"messagePart": "Salad Toppings"
+			},
+			{
+				"sequence": 5,
+				"image": "member's mark bacon",
+				"imageUrl": "",
+				"partUrl": "/s/member's mark bacon",
+				"messagePart": "member's mark bacon",
+				"hasRelatedSearch": true
+			},
+			{
+				"sequence": 6,
+				"image": "member's mark restaurant",
+				"imageUrl": "",
+				"partUrl": "/s/member's mark restaurant bacon",
+				"messagePart": "member's mark restaurant",
+				"hasRelatedSearch": true
+			},
+			{
+				"sequence": 7,
+				"image": "restaurant style bacon",
+				"imageUrl": "",
+				"partUrl": "/s/restaurant style bacon",
+				"messagePart": "restaurant style bacon",
+				"hasRelatedSearch": true
+			},
+			{
+				"sequence": 8,
+				"image": "original bacon",
+				"imageUrl": "",
+				"partUrl": "/s/original bacon",
+				"messagePart": "original bacon",
+				"hasRelatedSearch": true
+			},
+			{
+				"sequence": 9,
+				"image": "sunday bacon",
+				"imageUrl": "",
+				"partUrl": "/s/sunday bacon",
+				"messagePart": "sunday bacon",
+				"hasRelatedSearch": true
+			}
+		],
+		"suggestions": [],
+		"filtersDelimiter": "pipsymb",
+		"filterValuesDelimiter": ":",
+		"dimensionGroups": [
+			{
+				"groupId": "Category",
+				"groupName": "Category",
+				"multiSelect": false,
+				"urlPart": "category",
+				"dimentionList": [
+					{
+						"count": 23,
+						"value": "(23)",
+						"name": "Bacon & Sausage",
+						"id": "1549",
+						"categoryId": "1549",
+						"altQuery": "1549",
+						"urlPart": "Bacon & Sausage",
+						"urlParameter": "pcs_availability%3AOnlinepipsymbcategory%3ABacon%20%26%20Sausage"
+					},
+					{
+						"count": 2,
+						"value": "(2)",
+						"name": "Lunch Meat",
+						"id": "1547",
+						"categoryId": "1547",
+						"altQuery": "1547",
+						"urlPart": "Lunch Meat",
+						"urlParameter": "pcs_availability%3AOnlinepipsymbcategory%3ALunch%20Meat"
+					},
+					{
+						"count": 1,
+						"value": "(1)",
+						"name": "Salad Dressing & Croutons",
+						"id": "1533",
+						"categoryId": "1533",
+						"altQuery": "1533",
+						"urlPart": "Salad Dressing & Croutons",
+						"urlParameter": "pcs_availability%3AOnlinepipsymbcategory%3ASalad%20Dressing%20%26%20Croutons"
+					}
+				]
+			},
+			{
+				"groupName": "Product Type",
+				"groupId": "ProductType",
+				"multiSelect": true,
+				"urlPart": "Product Type",
+				"dimentionList": [
+					{
+						"count": 23,
+						"value": "(23)",
+						"id": "ProductTypeBacon",
+						"name": "Bacon",
+						"selected": false,
+						"urlPart": "Bacon",
+						"urlParameter": "pcs_availability%3AOnlinepipsymbProduct%20Type%3ABacon"
+					},
+					{
+						"count": 1,
+						"value": "(1)",
+						"id": "ProductTypeCanadianBacon",
+						"name": "Canadian Bacon",
+						"selected": false,
+						"urlPart": "Canadian Bacon",
+						"urlParameter": "pcs_availability%3AOnlinepipsymbProduct%20Type%3ACanadian%20Bacon"
+					},
+					{
+						"count": 1,
+						"value": "(1)",
+						"id": "ProductTypeSaladToppings",
+						"name": "Salad Toppings",
+						"selected": false,
+						"urlPart": "Salad Toppings",
+						"urlParameter": "pcs_availability%3AOnlinepipsymbProduct%20Type%3ASalad%20Toppings"
+					}
+				]
+			},
+			{
+				"groupName": "Brand",
+				"groupId": "Brand",
+				"multiSelect": true,
+				"urlPart": "Brand",
+				"dimentionList": [
+					{
+						"count": 5,
+						"value": "(5)",
+						"id": "BrandMembersMark",
+						"name": "Member's Mark",
+						"selected": false,
+						"urlPart": "Member's Mark",
+						"urlParameter": "pcs_availability%3AOnlinepipsymbBrand%3AMember's%20Mark"
+					},
+					{
+						"count": 4,
+						"value": "(4)",
+						"id": "BrandWrightBrand",
+						"name": "Wright Brand",
+						"selected": false,
+						"urlPart": "Wright Brand",
+						"urlParameter": "pcs_availability%3AOnlinepipsymbBrand%3AWright%20Brand"
+					},
+					{
+						"count": 2,
+						"value": "(2)",
+						"id": "BrandHormel",
+						"name": "Hormel",
+						"selected": false,
+						"urlPart": "Hormel",
+						"urlParameter": "pcs_availability%3AOnlinepipsymbBrand%3AHormel"
+					},
+					{
+						"count": 2,
+						"value": "(2)",
+						"id": "BrandGodshalls",
+						"name": "Godshalls",
+						"selected": false,
+						"urlPart": "Godshalls",
+						"urlParameter": "pcs_availability%3AOnlinepipsymbBrand%3AGodshalls"
+					},
+					{
+						"count": 2,
+						"value": "(2)",
+						"id": "BrandSmithfield",
+						"name": "Smithfield",
+						"selected": false,
+						"urlPart": "Smithfield",
+						"urlParameter": "pcs_availability%3AOnlinepipsymbBrand%3ASmithfield"
+					},
+					{
+						"count": 1,
+						"value": "(1)",
+						"id": "BrandApplegate",
+						"name": "Applegate",
+						"selected": false,
+						"urlPart": "Applegate",
+						"urlParameter": "pcs_availability%3AOnlinepipsymbBrand%3AApplegate"
+					},
+					{
+						"count": 1,
+						"value": "(1)",
+						"id": "BrandDAK",
+						"name": "DAK",
+						"selected": false,
+						"urlPart": "DAK",
+						"urlParameter": "pcs_availability%3AOnlinepipsymbBrand%3ADAK"
+					},
+					{
+						"count": 1,
+						"value": "(1)",
+						"id": "BrandFallsBrand",
+						"name": "Falls Brand",
+						"selected": false,
+						"urlPart": "Falls Brand",
+						"urlParameter": "pcs_availability%3AOnlinepipsymbBrand%3AFalls%20Brand"
+					},
+					{
+						"count": 1,
+						"value": "(1)",
+						"id": "BrandFarmland",
+						"name": "Farmland",
+						"selected": false,
+						"urlPart": "Farmland",
+						"urlParameter": "pcs_availability%3AOnlinepipsymbBrand%3AFarmland"
+					},
+					{
+						"count": 1,
+						"value": "(1)",
+						"id": "BrandHemplerFoodGroupLLC",
+						"name": "Hempler Food Group LLC",
+						"selected": false,
+						"urlPart": "Hempler Food Group LLC",
+						"urlParameter": "pcs_availability%3AOnlinepipsymbBrand%3AHempler%20Food%20Group%20LLC"
+					},
+					{
+						"count": 1,
+						"value": "(1)",
+						"id": "BrandHormelBlackLabel",
+						"name": "Hormel Black Label",
+						"selected": false,
+						"urlPart": "Hormel Black Label",
+						"urlParameter": "pcs_availability%3AOnlinepipsymbBrand%3AHormel%20Black%20Label"
+					},
+					{
+						"count": 1,
+						"value": "(1)",
+						"id": "BrandJennieO",
+						"name": "Jennie-O",
+						"selected": false,
+						"urlPart": "Jennie-O",
+						"urlParameter": "pcs_availability%3AOnlinepipsymbBrand%3AJennie-O"
+					},
+					{
+						"count": 1,
+						"value": "(1)",
+						"id": "BrandKunzler",
+						"name": "Kunzler",
+						"selected": false,
+						"urlPart": "Kunzler",
+						"urlParameter": "pcs_availability%3AOnlinepipsymbBrand%3AKunzler"
+					},
+					{
+						"count": 1,
+						"value": "(1)",
+						"id": "BrandLouisRich",
+						"name": "Louis Rich",
+						"selected": false,
+						"urlPart": "Louis Rich",
+						"urlParameter": "pcs_availability%3AOnlinepipsymbBrand%3ALouis%20Rich"
+					},
+					{
+						"count": 1,
+						"value": "(1)",
+						"id": "BrandSugardale",
+						"name": "Sugardale",
+						"selected": false,
+						"urlPart": "Sugardale",
+						"urlParameter": "pcs_availability%3AOnlinepipsymbBrand%3ASugardale"
+					}
+				]
+			},
+			{
+				"groupId": "productrating",
+				"groupName": "Product Rating",
+				"multiSelect": false,
+				"urlPart": "Product Rating",
+				"dimentionList": [
+					{
+						"count": 24,
+						"value": "(24)",
+						"id": "ProductRating4starsandabove",
+						"name": "4 stars and above",
+						"selected": false,
+						"urlPart": "4 stars and above",
+						"urlParameter": "pcs_availability%3AOnlinepipsymbProduct%20Rating%3A4%20stars%20and%20above"
+					}
+				]
+			},
+			{
+				"groupName": "Delivery Options",
+				"groupId": "DeliveryOptions",
+				"multiSelect": true,
+				"urlPart": "Delivery Options",
+				"dimentionList": []
+			},
+			{
+				"groupId": "price",
+				"groupName": "Price",
+				"actualName": "price",
+				"multiSelect": true,
+				"dimentionList": [
+					{
+						"count": 4,
+						"value": "(4)",
+						"id": "price010",
+						"name": "$0 - $10",
+						"selected": false,
+						"urlPart": "[0 TO 10]",
+						"urlParameter": "pcs_availability%3AOnlinepipsymbprice%3A%5B0%20TO%2010%5D"
+					},
+					{
+						"count": 18,
+						"value": "(18)",
+						"id": "price1020",
+						"name": "$10 - $20",
+						"selected": false,
+						"urlPart": "[10 TO 20]",
+						"urlParameter": "pcs_availability%3AOnlinepipsymbprice%3A%5B10%20TO%2020%5D"
+					},
+					{
+						"count": 3,
+						"value": "(3)",
+						"id": "price2050",
+						"name": "$20 - $50",
+						"selected": false,
+						"urlPart": "[20 TO 50]",
+						"urlParameter": "pcs_availability%3AOnlinepipsymbprice%3A%5B20%20TO%2050%5D"
+					}
+				]
+			}
+		],
+		"sba": {
+			"adcontents": [
+				{
+					"module": "SC",
+					"type": "SPONSORED_PRODUCTS",
+					"adUid": "34d39dc2-19c9-4329-ac08-f6618a978672",
+					"moduleInfo": "{\"adExpId\":\"\",\"bucketId\":\"2\",\"ghost\":[],\"brands\":[]}",
+					"adsData": {
+						"min": 1,
+						"max": 4,
+						"numberofAdsShown": 1
+					},
+					"brands": [
+						{
+							"logo": {
+								"featuredUrl": "https://www.samsclub.com/p/daniele-gourmet-selection-prosciutto/prod21051338?xid=plp_product_1",
+								"featuredDesktopImage": "https://i5.walmartimages.com/dfw/9fa19e5c-99/k2-_43f1373c-e368-4542-ad68-f29ea862307e.v1.png",
+								"featuredMobileImage": "https://i5.walmartimages.com/dfw/9fa19e5c-99/k2-_43f1373c-e368-4542-ad68-f29ea862307e.v1.png",
+								"featuredImageName": "Del Duca",
+								"OnClickBeacon": "https://www.samsclub.com/midas/sams-crs/track?adUid=34d39dc2-19c9-4329-ac08-f6618a978672&pgId=bacon&spQs=B-0ORuQ6BMVYu5ErviP0wlEyCGGZHgFK_OkaKu5X948UVZMtI3_YjexdLgc7MMcT05P2xRaGXgqNB9y_qZmC1kxe_Kl7XGQBo865k4KpFzzsT5AYZ4BvHa0iy5xrBfEqiI1xU5gMpUDFLIG_Zv2pVTzEKcAi2uzOWn7fgtpwcO8&storeId=1000&pt=search&mloc=sb-search-top&bkt=2&pltfm=desktop&rdf=0&plmt=__plmt__&eventST=__eventST__&pos=__pos__&bt=__bt__&tax=1444_430221_1545_1549&addlInfo=%7EsbaItems%7Cprod21051338%7E",
+								"featuredHeadline": "Togetherness Food Best Served in Good Company",
+								"spQs": "B-0ORuQ6BMVYu5ErviP0wlEyCGGZHgFK_OkaKu5X948UVZMtI3_YjexdLgc7MMcT05P2xRaGXgqNB9y_qZmC1kxe_Kl7XGQBo865k4KpFzzsT5AYZ4BvHa0iy5xrBfEqiI1xU5gMpUDFLIG_Zv2pVTzEKcAi2uzOWn7fgtpwcO8"
+							},
+							"products": [
+								{
+									"productId": "prod21051338",
+									"productType": "NORMALITEM",
+									"descriptors": {
+										"name": "Del Duca Dry Cured Prosciutto Slices (14 oz.)",
+										"whyWeLoveIt": "<p>Aged and cured to absolute perfection, and now the sliced and shingled prosciutto has interleaf sheets between each piece for ease&nbsp;of portioning and handling.</p>",
+										"productdescription": "Del Duca Dry Cured Prosciutto Slices (14 oz.)"
+									},
+									"category": {
+										"categoryId": "1550",
+										"seoUrl": "/b/pork/1550",
+										"name": "Pork"
+									},
+									"assets": {
+										"template": "/shop/product/templates/samsShop_productType_typical.jsp"
+									},
+									"searchAndSeo": {
+										"keywords": "Daniele Del Duca Prosciutto (18 oz.),Daniele,Danielle,Ham,Pork,Charcuterie,Prosciutto,Pre-sliced,cheeses & crackers,Italian sandwich,cheese,crackers,wine,presliced,sea salt,aged meat,aged,del duca,del duca prosciutto,prosciutto,jamon,",
+										"name": "daniele-gourmet-selection-prosciutto",
+										"url": "/p/daniele-gourmet-selection-prosciutto/prod21051338"
+									},
+									"manufacturingInfo": {
+										"model": "85575",
+										"brand": "Del Duca"
+									},
+									"reviewsAndRatings": {
+										"numReviews": 415,
+										"avgRating": 4.3229,
+										"avgRecommended": 0.12,
+										"isEligibleForAskAndAnswer": true
+									},
+									"skus": [
+										{
+											"skuId": "sku21579816",
+											"productId": "prod21051338",
+											"descriptors": {
+												"name": "Del Duca Prosciutto (14 oz.)",
+												"longDescription": "<p>Prosciutto is a favorite Italian treat of pork dry-cured with sea-salt. By using all-natural ingredients, Del Duca Prosciutto delivers an authentic taste that works well in a variety of dishes. This large package can be used to add a layer of flavor to your everyday dishes or can be served at a party where everyone will enjoy the savory, sweet taste. What Are Some Recipes for Daniele Gourmet Selection Prosciutto? There are many ways to use Del Duca Prosciutto. It is good to eat by itself. However, there are other ways to enjoy meat. You can wrap cheese with it or enjoy it on artisan bread. You can chop it up and add it to pasta dishes or combine it with peas. Some of the best prosciutto recipes include wrapping asparagus or adding it to pizza. Use prosciutto as a bacon substitute in your eggs Benedict. Prosciutto with fruit, vegetables and olives is also a delicious treat. What Is the Best Way to Serve Boneless Prosciutto? Prosciutto needs to be refrigerated until ready to consume. However, it tastes best at room temperature. When ready to serve, remove the container from the fridge and allow it to come to room temperature, about 10 to 20 minutes. Refrigerate any remaining servings. Is Daniele Del Duca Prosciutto Gluten-free? Daniele Prosciutto does not contain gluten and is free of added MSG. This prosciutto package is made with all-natural ingredients with only two ingredients: pork and salt. It is free of allergens such as soy, dairy or eggs. The prosciutto is never heat-treated. There are no chemicals or preservatives added to keep the prosciutto fresh. Daniele Prosciutto is made in the United States. What is the Serving size of Del Duca Boneless Prosciutto? Each 14 oz. container of Del Duca Boneless Prosciutto by Daniele has 14, 1 oz servings. Each serving has 50 calories with just 3 grams of fat and 8 grams of protein.</p>\n",
+												"comments": "Republish OAR 8-1-23"
+											},
+											"assets": {
+												"image": "0073643685575_A"
+											},
+											"shippingOption": {
+												"costType": "Calculated",
+												"flag": "freeEligible",
+												"isAirShippable": true
+											},
+											"type": "NORMAL_SKU",
+											"fulfillmentChannels": [
+												"CLUB_PICKUP",
+												"D2H"
+											],
+											"merchandiseCategory": 57,
+											"merchandiseSubCategory": 51,
+											"manufacturingInfo": {
+												"model": "85575"
+											},
+											"skuProperties": [
+												"AIR_SHIPPABLE"
+											],
+											"status": "ACTIVE",
+											"itemPolicies": []
+										}
+									],
+									"expiresAt": "2024-04-21T03:17:48.118Z",
+									"cached": true,
+									"id": "prod21051338",
+									"prodProperties": [
+										"MERCHANT_AUTHORIZED",
+										"ELIGIBLE_FOR_ASKANDANSWER"
+									],
+									"legacyProductType": "NORMALITEM",
+									"parentCategories": [
+										"2267",
+										"1550",
+										"12390114",
+										"1271"
+									],
+									"status": "ACTIVE",
+									"itemPolicies": [],
+									"hasPromotion": false,
+									"isOOS": true,
+									"freeWarranty": false,
+									"transformed": true,
+									"spQs": "lyHKoaFLQNC-XPpbtDVcMy_4TuttNBiTGyAOtSDPMrDa4p0e4UA6_QHewqNDofL35wxQJ01sENjDtRjVfssPwX4ePe0tguyqW8pb9yikwPPu6lAxmdVexOFm4WZE6qSvYvgn7ohxGpmpT5ROpS2nvEXkDO0Ng3lpjWmQg-lCHA4",
+									"OnClickBeacon": "https://www.samsclub.com/midas/sams-crs/track?adUid=34d39dc2-19c9-4329-ac08-f6618a978672&pgId=bacon&spQs=lyHKoaFLQNC-XPpbtDVcMy_4TuttNBiTGyAOtSDPMrDa4p0e4UA6_QHewqNDofL35wxQJ01sENjDtRjVfssPwX4ePe0tguyqW8pb9yikwPPu6lAxmdVexOFm4WZE6qSvYvgn7ohxGpmpT5ROpS2nvEXkDO0Ng3lpjWmQg-lCHA4&storeId=1000&pt=search&mloc=sb-search-top&bkt=2&pltfm=desktop&rdf=0&plmt=__plmt__&eventST=__eventST__&pos=__pos__&bt=__bt__&tax=1444_430221_1545_1549"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		"bannerContents": {
+			"images": null
+		},
+		"adsData": {
+			"min": 1,
+			"max": 4,
+			"numberofAdsShown": 0
+		},
+		"sv": {
+			"adcontents": [
+				{
+					"module": "SponsoredVideoAd_middle",
+					"type": "SPONSORED_PRODUCTS",
+					"adUid": "d07938fe-3568-438a-94bf-eebaa553fbb4",
+					"moduleInfo": "{\"adExpId\":\"\",\"bucketId\":\"\",\"ghost\":[],\"brands\":[]}",
+					"adsData": {
+						"min": 1,
+						"max": 1,
+						"numberofAdsShown": 0
+					},
+					"videos": []
+				}
+			]
+		}
+	}
+}
+
+
+[{"skuId":"IG03060559",
+  "productId":"P03025146"
+  ,
+  "clubOffer":{"productId":"P03025146",
+    "gtin":"81390500362",
+    "id":"P03025146_IG03060559_4750",
+    "inventory":{"status":"LIMITED",
+      "availableTotalQty":31,
+      "available
+      ToSellQuantity":31,
+      "qtySold":-1,
+      "qtyLeft":-1},
+    "itemNumber":"990312806",
+    "mdsFamId":"380102354",
+    "offerStatus":"PURCHASABLE",
+    "price":{"type":"FIXED",
+      "finalPrice
+      ":{"amount":7.84,
+        "currency":"USD"},
+      "startPrice":{"amount":7.84,
+        "currency":"USD"},
+      "priceStatus":"ACTIVE",
+      "priceDisplayOption":"SHOW"},
+    "status":"A",
+    "clubItem":
+    {"clubItemProperties":["DFC_ENABLED"]},
+    "sellQtyUnitofMeasure":"EA",
+    "skuId":"IG03060559",
+    "clubId":4750,
+    "cpuEnabled":true,
+    "offerId":"P03025146_IG03060559",
+    "rec
+    ommendedDisplayOffer":true,
+    "clubOfferProperties":["MERCHANT_AUTHORIZED",
+      "TAX_EXEMPT",
+      "CPU_ENABLED",
+      "IS_ACTIVE",
+      "AIR_SHIPPABLE",
+      "DISCOUNT_INDICATOR"]},
+  "descri
+  ptors":{"name":"Great Day Farms Cage-Free Hard Boiled Eggs (12 pk.)"},
+  "assets":{"image":"0081390500362_A"},
+  "shippingOption":{"costType":"Calculated",
+    "flag":"
+    freeEligible",
+    "isAirShippable":true},
+  "type":"NORMAL_SKU",
+  "fulfillmentChannels":["CLUB_PICKUP",
+    "D2H"],
+  "merchandiseCategory":57,
+  "merchandiseSubCategory":11,
+  "skuProperties":["AVAILABLE_SEPARATELY",
+    "AIR_SHIPPABLE"],
+  "status":"ACTIVE",
+  "itemPolicies":[],
+  "recommendedDisplayChannel":"CLUB",
+  "deliveryOffer":{"productId":"P0
+    3025146",
+    "gtin":"81390500362",
+    "id":"P03025146_IG03060559_4750",
+    "inventory":{"status":"LIMITED",
+      "availableTotalQty":31,
+      "availableToSellQuantity":31,
+      "qtySold":
+      -1,
+      "qtyLeft":-1},
+    "itemNumber":"990312806",
+    "mdsFamId":"380102354",
+    "offerStatus":"PURCHASABLE",
+    "price":{"type":"FIXED",
+      "finalPrice":{"amount":7.84,
+        "currency":"
+        USD"},
+      "startPrice":{"amount":7.84,
+        "currency":"USD"},
+      "priceStatus":"ACTIVE",
+      "priceDisplayOption":"SHOW"},
+    "status":"A",
+    "clubItem":{"clubItemProperties":["DFC_E
+      NABLED"]},
+    "sellQtyUnitofMeasure":"EA",
+    "skuId":"IG03060559",
+    "clubId":4750,
+    "cpuEnabled":true,
+    "offerId":"P03025146_IG03060559",
+    "recommendedDisplayOffer":true,
+    "deliveryOfferProperties":["MERCHANT_AUTHORIZED",
+      "TAX_EXEMPT",
+      "IS_ACTIVE",
+      "AIR_SHIPPABLE",
+      "DISCOUNT_INDICATOR",
+      "DFC_ENABLED"]}}]

@@ -1,4 +1,4 @@
-use std::fmt::Display;
+use std::{collections::HashMap, fmt::Display, str::FromStr};
 
 use reqwest::Client;
 use rocket::response::content::RawHtml;
@@ -25,19 +25,19 @@ async fn gas_price_google() -> Result<f64, String> {
         .iter()
     {
         let i = i.as_array().unwrap()[22].as_array().unwrap();
-        let name = i[0].as_array().unwrap()[0].as_str().unwrap();
+        let _name = i[0].as_array().unwrap()[0].as_str().unwrap();
         let Some(id) = i[13].as_array() else {
             continue;
         };
         let id = id[0].as_array().unwrap()[0].as_str().unwrap();
-        println!("{name:?} {id:?}");
+        // println!("{name;?} {id:?}");
         let ids: Vec<_> = id.split(':').collect();
         let [id1, id2, ..] = &ids[..] else {
             continue;
         };
         let url = price_templ.replace("CODE1", id1).replace("CODE2", id2);
         let resp = c.get(url).send().await.unwrap();
-        println!("{}", resp.status());
+        // println!("{}", resp.status());
         let s = resp.text_with_charset("utf-8").await.unwrap();
 
         // println!("{s}\n\n");
@@ -61,7 +61,7 @@ async fn gas_price_google() -> Result<f64, String> {
         //     println!("{i:?}\n");
         // }
         // println!("{list:?}\n\n");
-        println!("{price:?}");
+        // println!("{price:?}");
         if best_p.is_none() || best_p > price {
             best_p = price;
         }
@@ -134,6 +134,7 @@ enum Source {
     Target,
     Aldi,
     Meijer,
+    Sams,
 }
 impl Display for Source {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
@@ -142,6 +143,7 @@ impl Display for Source {
             Source::Target => write!(f, "Target"),
             Source::Aldi => write!(f, "Aldi's"),
             Source::Meijer => write!(f, "Meijer"),
+            Source::Sams => write!(f, "Sam's Club"),
         }
     }
 }
@@ -158,32 +160,66 @@ struct Item {
 impl Item {
     fn to_html(&self) -> String {
         format!(
-            "<h3>{}</h3><img src=\"{}\", style=\"width: 100px; height: 100px;\"><br/>Price:<b>{}</b> {} </br><a href=\"{}\">Buy item from {}</a></br></br>",
+            "<h3>{}</h3><img src=\"{}\" class=\"search-image\"><br/>Price: <b>${}</b> {} </br><a href=\"{}\">Buy item from {}</a></br></br>",
              self.name, self.image, self.price, self.unit_price.map(|u| format!("Unit price: <b>${u}</b>")).unwrap_or("".into()), self.link, self.source
         )
     }
 }
+#[derive(Debug, Clone, Copy)]
+enum SortMode {
+    Price,
+    UnitPrice,
+}
+impl FromStr for SortMode {
+    type Err = ();
 
-#[derive(Default, Debug)]
-struct ItemStack(Vec<Item>);
+    fn from_str(s: &str) -> Result<Self, Self::Err> {
+        if s == "price" {
+            Ok(Self::Price)
+        } else if s == "unitPrice" {
+            Ok(Self::UnitPrice)
+        } else {
+            Err(())
+        }
+    }
+}
+impl Default for SortMode {
+    fn default() -> Self {
+        Self::UnitPrice
+    }
+}
+
+#[derive(Debug, Default)]
+struct ItemStack(Vec<Item>, SortMode);
 impl ItemStack {
     fn insert(&mut self, item: Item) {
         let ipos = self
             .0
             .iter()
-            .position(|item_s| {
-                if item.unit_price.is_some() && item_s.unit_price.is_some() {
-                    item_s.unit_price > item.unit_price
-                } else {
-                    item.price < item_s.price
-                }
-            })
+            .position(
+                |item_s| match (self.1, item.unit_price, item_s.unit_price) {
+                    (_, None, None) | (SortMode::Price, _, _) => item.price < item_s.price,
+                    (SortMode::UnitPrice, None, Some(_)) => false,
+                    (SortMode::UnitPrice, Some(_), None) => true,
+                    (SortMode::UnitPrice, Some(l), Some(r)) => l < r,
+                },
+            )
             .unwrap_or(self.0.len());
         self.0.insert(ipos, item)
     }
 
     fn to_html(&self) -> String {
-        self.0.iter().fold(String::new(), |x, y| x + "<hr>" + &y.to_html())
+        self.0.iter().enumerate().fold(String::new(), |x, (i, y)| {
+            x + &if i == 0 {
+                "<hr><div class=\"first\">".to_owned() + &y.to_html() + "</div>"
+            } else if i == 1 {
+                "<hr><div class=\"second\">".to_owned() + &y.to_html() + "</div>"
+            } else if i == 2 {
+                "<hr><div class=\"third\">".to_owned() + &y.to_html() + "</div>"
+            } else {
+                "<hr>".to_owned() + &y.to_html()
+            }
+        })
     }
     fn merge(mut self, rhs: ItemStack) -> ItemStack {
         for i in rhs.0.into_iter() {
@@ -235,13 +271,13 @@ async fn get_price_of_walmart(item: &str) -> Result<ItemStack, String> {
         else {
             continue;
         };
-        let price = dbg!(&curprice["currentPrice"])
+        let price = curprice["currentPrice"]
             .as_object()
             .map(|u| u["price"].as_f64().unwrap());
         let Some(price) = price else {
             continue;
         };
-        let unit_price = dbg!(&curprice["unitPrice"])
+        let unit_price = curprice["unitPrice"]
             .as_object()
             .map(|u| u["price"].as_f64().unwrap());
         let img = i.as_object().unwrap()["imageInfo"].as_object().unwrap()["thumbnailUrl"]
@@ -253,7 +289,7 @@ async fn get_price_of_walmart(item: &str) -> Result<ItemStack, String> {
             name: i.as_object().unwrap()["name"].as_str().unwrap().to_owned(),
             price,
             unit_price,
-            link: "www.walmart.com".to_owned()
+            link: "https://www.walmart.com".to_owned()
                 + i.as_object().unwrap()["canonicalUrl"].as_str().unwrap(),
             image: img,
             source: Source::Walmart,
@@ -293,7 +329,7 @@ async fn get_price_of_target(item: &str) -> Result<ItemStack, String> {
     // data search products [] item product_description title
     // data search products [] price current_retail/formatted_unit_price
     let parse_json = serde_json::from_str::<Value>(&s).unwrap();
-    let Some(prods) = dbg!(parse_json.as_object().unwrap())["data"]
+    let Some(prods) = parse_json.as_object().unwrap()["data"]
         .as_object()
         .unwrap()
         .get("search")
@@ -386,10 +422,14 @@ async fn get_price_of_aldis(item: &str) -> Result<ItemStack, String> {
                 i.as_object().unwrap()["externalUrlLarge"]
                     .as_str()
                     .unwrap()
-                    .replace("{width}", "100")
+                    .replace("{width}", "300")
             });
         let link = "https://new.aldi.us/product/".to_owned()
-            + item.as_object().unwrap()["urlSlugText"].as_str().unwrap();
+            + item.as_object().unwrap()["urlSlugText"].as_str().unwrap()
+            + "-"
+            + item.as_object().unwrap()["productConcreteSku"]
+                .as_str()
+                .unwrap();
         itemstack.insert(Item {
             name,
             price,
@@ -400,30 +440,6 @@ async fn get_price_of_aldis(item: &str) -> Result<ItemStack, String> {
         })
     }
     Ok(itemstack)
-}
-
-// fn main() {
-//     // println!("{:?}", GasBuddy.gas_price());
-//     rocket
-//     println!("{:?}", Walmart.get_price_of("bacon"));
-// }
-
-#[get("/")]
-fn index() -> RawHtml<&'static str> {
-    RawHtml(
-        r##"<html><head><script src="https://unpkg.com/htmx.org@1.9.12" integrity="sha384-ujb1lZYygJmzgSwoxRggbCHcjc0rB2XoQrxeTUQyRjrOnlCoYta87iKBWq3EsdM2" crossorigin="anonymous"></script><style>
-#load{
-        opacity:0;
-        transition: opacity 500ms ease-in;
-    }
-    .htmx-request #load{
-        opacity:1
-    }
-    .htmx-request#load{
-        opacity:1
-    }
-        </style><title>PriceSmart</title></head><body><form hx-target="#results" hx-post="/search" hx-indicator="#load"><input name="prod" id="prod"><button type="submit" hx_>Submit</button></form><p id="load" >Searching...</p><p id="results"></p></body></html>"##,
-    )
 }
 
 async fn get_price_of_meijer(item: &str) -> Result<ItemStack, String> {
@@ -440,7 +456,11 @@ async fn get_price_of_meijer(item: &str) -> Result<ItemStack, String> {
 
         let name = i.as_object().unwrap()["value"].as_str().unwrap().to_owned();
         let price = data["price"].as_f64().unwrap();
-        let link = data["url"].as_str().unwrap().to_owned();
+        let link = data["url"]
+            .as_str()
+            .unwrap()
+            .replace("shop/en", "shopping/product")
+            + ".html";
         let image = data["image_url"].as_str().unwrap().to_owned();
 
         itemstack.insert(Item {
@@ -455,10 +475,221 @@ async fn get_price_of_meijer(item: &str) -> Result<ItemStack, String> {
     Ok(itemstack)
 }
 
-#[post("/search", data = "<prodd>")]
-async fn search(prodd: String) -> Result<RawHtml<String>, String> {
-    let (_, prod) = prodd.split_once('=').ok_or("Invalid form".to_owned())?;
+async fn get_price_of_sams_club(item: &str) -> Result<ItemStack, String> {
+    let c = Client::new();
+    let r = c.get("https://www.samsclub.com").send().await.unwrap();
+    let cookie = r
+        .headers()
+        .iter()
+        .filter(|(k, _)| k.as_str() == "set-cookie")
+        .map(|(_, v)| v.to_str().unwrap())
+        .fold(String::new(), |c, a| c + a);
+    let r = c.get("https://www.samsclub.com/api/node/vivaldi/browse/v2/products/search?sourceType=1&limit=45&clubId=4750&searchTerm=PRODUCT&br=true&secondaryResults=2&wmsponsored=1&wmsba=true&banner=true&wmVideo=true".replace("PRODUCT", item))
+.header("Cookie",cookie) 
+        .header("User-Agent", "Mozilla/5.0 (X11; Linux x86_64; rv:124.0) Gecko/20100101 Firefox/124.0")
+        .send().await.unwrap();
+    let s = r.text_with_charset("utf-8").await.unwrap();
+    // println!("{s}");
+    let json = serde_json::from_str::<Value>(&s).unwrap();
+    let mut best = ItemStack::default();
+    for item in json.as_object().unwrap()["payload"].as_object().unwrap()["records"]
+        .as_array()
+        .unwrap()
+    {
+        let item = item.as_object().unwrap();
+        let name = item["descriptors"].as_object().unwrap()["name"]
+            .as_str()
+            .unwrap()
+            .to_owned();
+        let image = "https://scene7.samsclub.com/is/image/samsclub/".to_owned()
+            + item["skus"].as_array().unwrap()[0].as_object().unwrap()["assets"]
+                .as_object()
+                .unwrap()["image"]
+                .as_str()
+                .unwrap();
+        println!("{name}");
+        let mut prices = item["skus"].as_array().unwrap()[0]
+            .as_object()
+            .unwrap()
+            .get("onlineOffer")
+            .map(|o| o.as_object().unwrap()["price"].as_object().unwrap());
+        if prices.is_none() {
+            prices = item["skus"].as_array().unwrap()[0]
+                .as_object()
+                .unwrap()
+                .get("clubOffer")
+                .unwrap()
+                .as_object()
+                .unwrap()["price"]
+                .as_object()
+        }
+
+        let prices = prices.unwrap();
+
+        let price = prices["finalPrice"].as_object().unwrap()["amount"]
+            .as_f64()
+            .unwrap();
+        let unit_price = prices
+            .get("unitPrice")
+            .and_then(|up| up.as_object().unwrap()["amount"].as_f64());
+        let link = "https://www.samsclub.com".to_owned()
+            + item["searchAndSeo"].as_object().unwrap()["url"]
+                .as_str()
+                .unwrap();
+        best.insert(Item {
+            name,
+            price,
+            unit_price: (unit_price),
+            link,
+            image,
+            source: Source::Sams,
+        })
+    }
+
+    Ok(best)
+}
+// fn main() {
+//     // println!("{:?}", GasBuddy.gas_price());
+//     rocket
+//     println!("{:?}", Walmart.get_price_of("bacon"));
+// }
+
+#[get("/")]
+fn index() -> RawHtml<&'static str> {
+    RawHtml(
+        r##"<html><head><script src="https://unpkg.com/htmx.org@1.9.12" integrity="sha384-ujb1lZYygJmzgSwoxRggbCHcjc0rB2XoQrxeTUQyRjrOnlCoYta87iKBWq3EsdM2" crossorigin="anonymous"></script><meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            font-size: 18;
+            text-align: center;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .search-form {
+            margin-bottom: 20px;
+            display: grid;
+        }
+        #prod {
+            height: 30px;
+            font-size: 20;
+            font-family: Arial;
+        }
+        input[type="text"], select {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 18;
+            text-align: center;
+        }
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        .search-results {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 4px;
+        }
+        .search-results h3 {
+            margin-top: 0;
+        }
+        .search-image {
+            max-width: 100%;
+            width: 100px;
+            height: auto;
+            margin-bottom: 10px;
+            transition: width 0.7s ease;
+        }
+        .search-image:hover {
+            width: 200px; 
+        }
+        .search-results p {
+           background-color: #f5f5f5; 
+        }
+        .search-results a {
+            display: block;
+            color: #007bff;
+            text-decoration: none;
+            margin-bottom: 10px;
+            transition: color 0.3s ease;
+        }
+        .search-results a:hover {
+            color: #0056b3;
+        }
+        /* Loading indicator styles */
+        .htmx-indicator {
+            opacity: 0;
+            transition: opacity 200ms ease-in;
+        }
+        .htmx-request .htmx-indicator {
+            opacity: 1;
+        }
+        .htmx-request.htmx-indicator {
+            opacity: 1;
+        }
+        .first {
+            background-color: #c0b030;
+            width: 100%;
+        }
+        .second {
+            background-color: #b0b0b0;
+            width: 100%;
+        }
+        .third {
+            background-color: #c09030;
+            width: 100%;
+        }
+        </style><title>PriceSmart</title></head>
+        <body>
+        <div class="container">
+        <h1>PriceSmart</h1>
+        <h2>Save money on every purchase</h2>
+        <form hx-target="#results" hx-post="/search" hx-indicator="#load" class="search-form">
+        <input name="prod" id="prod" placeholder="Enter product to buy">
+        <select name="subs">
+        <option value="">Include membership stores?</option>
+        <option value="true">Yes</option>
+        <option value="false">No</option>
+        </select>
+        <select name="sort">
+        <option value="unitPrice">Sort by unit price</option>
+        <option value="price">Sort by price</option>
+        </select>
+        <br/>
+        <input type="submit" value="Search">
+        </form>
+        <p id="load" class="htmx-indicator">Searching...</p>
+        <p id="results" class="search-results"></p>
+        </div>
+        </body></html>"##,
+    )
+}
+
+#[post("/search", data = "<data>")]
+async fn search(data: String) -> Result<RawHtml<String>, &'static str> {
+    let data_map: HashMap<&str, &str> = data.split('&').filter_map(|p| p.split_once('=')).collect();
+    let prod = data_map.get("prod").ok_or("No product found")?;
     let mut items = ItemStack::default();
+    let Ok(sortmode) = data_map["sort"].parse::<SortMode>() else {
+        return Err("Sorting mode invalid");
+    };
+    items.1 = sortmode;
     let mut prefix = String::new();
     let target_res = get_price_of_target(prod).await;
     if let Ok(target) = target_res {
@@ -483,6 +714,14 @@ async fn search(prodd: String) -> Result<RawHtml<String>, String> {
         items = items.merge(meijer);
     } else {
         prefix += "Meijer didnt load</br>";
+    }
+    if data_map["subs"] == "true" {
+        let sams_res = get_price_of_sams_club(prod).await;
+        if let Ok(sams) = sams_res {
+            items = items.merge(sams);
+        } else {
+            prefix += "Sams Club didnt load</br>";
+        }
     }
     Ok(RawHtml(prefix + &items.to_html()))
 }
